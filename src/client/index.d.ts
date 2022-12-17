@@ -1,9 +1,11 @@
+import './applications';
 import './canvas';
-import './documents';
 import './documentCollections';
+import './documents';
 
 import './ContextMenu';
 import './Game';
+import './Hooks';
 import './Localization';
 import './variables';
 

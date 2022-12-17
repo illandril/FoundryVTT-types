@@ -42,7 +42,7 @@ declare global {
     // readonly folders: Folders;
     get actors(): Actors;
     // readonly items: Items;
-    // readonly scenes: Scenes;
+    readonly scenes: Scenes;
     // readonly combats: CombatEncounters;
     // readonly journal: Journal;
     // readonly macros: Macros;

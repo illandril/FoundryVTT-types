@@ -1,14 +1,19 @@
 
-import { Application } from '../Application/Application';
+import { Application } from './applications/Application';
 
 type HookCallback<Args> = (...args: Args) => void;
 type EmptyCallback = HookCallback<void>;
 
 interface HookCallbacks {
   init: EmptyCallback
-  ready: () => void
-  setup: () => void
-  i18nInit: () => void
+  ready: EmptyCallback
+  setup: EmptyCallback
+  i18nInit: EmptyCallback
+
+  canvasInit: (canvas: Canvas) => void
+  canvasReady: (canvas: Canvas) => void
+  canvasTearDown: (canvas: Canvas) => void
+
   renderChatLog: (chatLog: Application, element: JQuery) => void
 
   controlToken: (token: Token, controlled: boolean) => void

@@ -1,7 +1,5 @@
-import './foundry';
 import './client';
-
-import './Hooks';
+import './foundry';
 import './PIXI';
 
 export {};
