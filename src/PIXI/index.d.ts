@@ -1,7 +1,7 @@
-import { Container } from 'pixi.js';
+import { Container, Point } from 'pixi.js';
 
 declare global {
   namespace PIXI {
-    export { Container };
+    export { Container, Point };
   }
 }
