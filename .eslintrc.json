@@ -1,0 +1,25 @@
+{
+  "root": true,
+  "extends": ["@illandril/eslint-config-foundryvtt"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": [
+    "/.history",
+    "/coverage",
+    "/dist",
+    "/node_modules"
+  ],
+  "globals": {
+    "game": "readonly",
+    "Hooks": "readonly"
+  },
+  "overrides": [
+    {
+      "files": ["rollup.config.js"],
+      "globals": {
+        "process": "readonly"
+      }
+    }
+  ]
+}
