@@ -5,6 +5,7 @@ declare global {
         get isGM(): boolean;
         get name(): string;
         get character(): foundry.documents.BaseActor | null;
+        get avatar(): string;
       }
     }
   }

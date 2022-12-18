@@ -3,6 +3,7 @@ declare global {
     namespace documents {
       class BaseToken extends foundry.abstract.Document {
         get actorId(): string;
+        get texture(): TextureData;
       }
     }
   }
