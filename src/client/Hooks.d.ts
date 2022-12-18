@@ -15,6 +15,7 @@ interface HookCallbacks {
   canvasTearDown: (canvas: Canvas) => void
 
   renderChatLog: (chatLog: Application, element: JQuery) => void
+  renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void
 
   controlToken: (token: Token, controlled: boolean) => void
 }

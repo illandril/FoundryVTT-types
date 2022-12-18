@@ -6,6 +6,9 @@ declare global {
 
     get alias(): string;
     get isAuthor(): boolean;
+    get isContentVisible(): boolean;
+    get isRoll(): boolean;
+    get visible(): boolean;
   }
 }
 
