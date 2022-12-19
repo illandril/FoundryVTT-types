@@ -31,9 +31,9 @@ type HooksType = {
     fn: HookCallbacks[K],
   ) => void,
 
-  callAll: <K extends keyof HooksCallbacks>(
+  callAll: <K extends keyof HookCallbacks>(
     hook: K,
-    ...args: Parameters<HookCallback[K]>,
+    ...args: Parameters<HookCallbacks[K]>,
   ) => void
 };
 
