@@ -4,7 +4,7 @@
 # This workflow will...
 # - Run tests using node
 
-name: Validate
+name: On Push / Pull Request
 
 on:
   push:
@@ -14,6 +14,7 @@ on:
 
 jobs:
   test:
+    name: Run Tests
     runs-on: ubuntu-latest
     permissions:
       contents: read
