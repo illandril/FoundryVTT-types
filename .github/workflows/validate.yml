@@ -29,4 +29,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Run validation
-        run: npm validate
+        run: npm run validate
