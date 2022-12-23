@@ -3,6 +3,7 @@ import './canvas';
 import './documentCollections';
 import './documents';
 
+import './ClientSettings';
 import './ContextMenu';
 import './Game';
 import './Hooks';
