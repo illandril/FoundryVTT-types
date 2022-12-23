@@ -1,14 +1,3 @@
-type StringSettingConfig = {
-  choices?: Record<string, string>
-};
-
-type NumberSettingConfig = {
-  range?: {
-    min: number
-    max: number
-    step: number
-  }
-};
 
 type SettingConfig<T = unknown> = {
   name: string
@@ -19,10 +8,13 @@ type SettingConfig<T = unknown> = {
   type: ClientSettings.SettingConstructor<T>
   default: T,
   onChange?: (value: T) => void
-} & (
-  T extends string ? StringSettingConfig
-    : T extends number | bigint ? NumberSettingConfig
-      : object);
+  choices?: T extends string ? Record<string, string> : never
+  range?: T extends number ? {
+    min: number
+    max: number
+    step: number
+  } : never
+};
 
 declare global {
   /**
@@ -30,7 +22,7 @@ declare global {
    * The singleton instance of the Game class is available as the global variable game.
    */
   class ClientSettings {
-    register<N extends string, K extends string>(module: N, key: K, data: SettingConfig<ClientSettings.Values[`${N}.${K}`]>): void;
+    register<N extends string, K extends string, T extends ClientSettings.Values[`${N}.${K}`]>(module: N, key: K, data: SettingConfig<T>): void;
 
     get<N extends string, K extends string>(module: N, key: K): ClientSettings.Values[`${N}.${K}`];
     set<N extends string, K extends string>(module: N, key: K, value: ClientSettings.Values[`${N}.${K}`]): void;
@@ -40,13 +32,12 @@ declare global {
     type SettingConstructor<T = unknown> =
       T extends string ? typeof String
         : T extends number ? typeof Number
-          : T extends bigint ? typeof BigInt
-            : T extends boolean ? typeof Boolean
-              : T extends object ? typeof Object
-                : never;
+          : T extends boolean ? typeof Boolean
+            : T extends object ? typeof Object
+              : never;
 
     interface Values {
-      [key: string]: unknown
+      [key: string]: never
     }
   }
 }
