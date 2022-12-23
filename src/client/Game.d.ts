@@ -18,7 +18,7 @@ declare global {
     // readonly nue: NewUserExperience;
     // readonly permissions: object | null;
     // readonly sessionId: string;
-    // readonly settings: ClientSettings;
+    readonly settings: ClientSettings;
     // readonly keybindings: ClientKeybindings;
     // readonly socket: WebSocket | null;
     // readonly time: GameTime;
