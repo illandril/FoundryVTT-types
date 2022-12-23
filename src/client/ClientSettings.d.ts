@@ -1,57 +1,28 @@
 type StringSettingConfig = {
-  type: typeof String
-  default: string
   choices?: Record<string, string>
-  onChange?: (value: string) => void
 };
 
 type NumberSettingConfig = {
-  type: typeof Number
-  default: number
   range?: {
     min: number
     max: number
     step: number
   }
-  onChange?: (value: number) => void
 };
 
-type BigIntSettingConfig = {
-  type: typeof BigInt
-  default: bigint
-  range?: {
-    min: bigint
-    max: bigint
-    step: bigint
-  }
-  onChange?: (value: bigint) => void
-};
-
-type BooleanSettingConfig = {
-  type: typeof Boolean
-  default: boolean
-  onChange?: (value: boolean) => void
-};
-
-type ObjectSettingConfig = {
-  type: typeof Object
-  default: object
-  onChange?: (value: object) => void
-};
-
-type SettingConfig<T = never> = {
+type SettingConfig<T = unknown> = {
   name: string
   hint?: string
   scope: 'client' | 'world'
   config: boolean
   requiresReload?: boolean
+  type: ClientSettings.SettingConstructor<T>
+  default: T,
+  onChange?: (value: T) => void
 } & (
   T extends string ? StringSettingConfig
-    : T extends number ? NumberSettingConfig
-      : T extends bigint ? BigIntSettingConfig
-        : T extends boolean ? BooleanSettingConfig
-          : T extends object ? ObjectSettingConfig
-            : never);
+    : T extends number | bigint ? NumberSettingConfig
+      : object);
 
 declare global {
   /**
@@ -66,6 +37,14 @@ declare global {
   }
 
   namespace ClientSettings {
+    type SettingConstructor<T = unknown> =
+      T extends string ? typeof String
+        : T extends number ? typeof Number
+          : T extends bigint ? typeof BigInt
+            : T extends boolean ? typeof Boolean
+              : T extends object ? typeof Object
+                : never;
+
     interface Values {
       [key: string]: unknown
     }
