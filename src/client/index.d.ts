@@ -1,7 +1,7 @@
-import './applications';
 import './canvas';
 import './documentCollections';
 import './documents';
+import './ui';
 
 import './ClientSettings';
 import './ContextMenu';

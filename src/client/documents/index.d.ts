@@ -1,6 +1,9 @@
+import './ActiveEffect';
 import './Actor';
 import './ChatMessage';
+import './DrawingDocument';
 import './Scene';
+import './TileDocument';
 import './TokenDocument';
 import './User';
 

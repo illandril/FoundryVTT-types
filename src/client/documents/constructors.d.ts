@@ -15,8 +15,11 @@ type ClientDocumentMixin<T extends typeof foundry.abstract.Document> = {
   new (...args: unknown[]): ClientDocument & InstanceType<T>;
 } & T;
 
+export const ActiveEffectConstructor: ClientDocumentMixin<typeof foundry.documents.BaseActiveEffect>;
 export const ActorConstructor: ClientDocumentMixin<typeof foundry.documents.BaseActor>;
 export const ChatMessageConstructor: ClientDocumentMixin<typeof foundry.documents.BaseChatMessage>;
+export const DrawingConstructor: ClientDocumentMixin<typeof foundry.documents.BaseDrawing>;
 export const SceneConstructor: ClientDocumentMixin<typeof foundry.documents.BaseScene>;
+export const TileConstructor: ClientDocumentMixin<typeof foundry.documents.BaseTile>;
 export const TokenDocumentConstructor: ClientDocumentMixin<typeof foundry.documents.BaseToken>;
 export const UserConstructor: ClientDocumentMixin<typeof foundry.documents.BaseUser>;

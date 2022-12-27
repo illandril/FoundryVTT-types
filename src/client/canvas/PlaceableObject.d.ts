@@ -3,6 +3,7 @@ declare global {
     get document(): T;
     get center(): PIXI.Point;
     get mouseInteractionManager(): MouseInteractionManager;
+    get bounds(): PIXI.Rectangle;
 
     control(options?: { releaseOthers?: boolean }): boolean;
     release(options?: { trigger?: boolean }): boolean;

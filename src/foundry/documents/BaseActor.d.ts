@@ -6,6 +6,7 @@ declare global {
       class BaseActor extends foundry.abstract.Document {
         get name(): string;
         get type(): TYPES;
+        get effects(): BaseActiveEffect[];
       }
     }
   }

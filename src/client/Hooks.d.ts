@@ -1,5 +1,5 @@
 
-import { Application } from './applications/Application';
+import { Application } from './ui/Application';
 
 type HookCallback<Args> = (...args: Args) => void;
 type EmptyCallback = HookCallback<void>;
@@ -13,6 +13,7 @@ interface HookCallbacks {
   canvasInit: (canvas: Canvas) => void
   canvasReady: (canvas: Canvas) => void
   canvasTearDown: (canvas: Canvas) => void
+  canvasPan: (canvas: Canvas, constrained: CanvasViewPosition) => void
 
   renderChatLog: (chatLog: Application, element: JQuery) => void
   renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void

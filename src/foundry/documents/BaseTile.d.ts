@@ -1,10 +1,8 @@
 declare global {
   namespace foundry {
     namespace documents {
-      class BaseToken extends foundry.abstract.Document {
-        get actorId(): string;
+      class BaseTile extends foundry.abstract.Document {
         get texture(): foundry.data.TextureData;
-        get effects(): string[];
         get width(): number;
         get height(): number;
       }
