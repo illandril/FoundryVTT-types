@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "eslint --fix",
+    "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
     "preversion": "npm run validate",
     "validate": "run-s type-check lint"
@@ -29,7 +29,7 @@
     "pixi.js": "^6.5.2"
   },
   "devDependencies": {
-    "@illandril/eslint-config-foundryvtt": "^1.6.2",
+    "@illandril/eslint-config-foundryvtt": "^1.7.2",
     "npm-run-all2": "^6.0.4",
     "typescript": "^4.9.4"
   }

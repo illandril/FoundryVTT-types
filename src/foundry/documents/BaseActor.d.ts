@@ -1,12 +1,12 @@
-type TYPES = 'character' | 'npc' | 'vehicle';
-
 declare global {
   namespace foundry {
     namespace documents {
       class BaseActor extends foundry.abstract.Document {
+        static TYPES: string[];
         get name(): string;
-        get type(): TYPES;
+        get type(): typeof foundry.documents.BaseActor.TYPES[number];
         get effects(): BaseActiveEffect[];
+        get items(): BaseItem[];
       }
     }
   }

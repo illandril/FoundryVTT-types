@@ -25,7 +25,7 @@ declare global {
       config: boolean
       requiresReload?: boolean
       type: ClientSettings.TypeConstructor<T>
-      default: T,
+      default: T
       onChange?: (value: T) => void
       choices?: T extends string ? Record<string, string> : never
       range?: T extends number ? {
