@@ -1,12 +1,18 @@
 declare global {
   namespace foundry {
     namespace documents {
-      class BaseItem extends foundry.abstract.Document {
-        static TYPES: string[];
-        get name(): string;
-        get type(): string;
-        get sort(): number;
-      }
+     type BaseItemFields = {
+       name: string
+       type: string
+       sort: number
+     };
+
+     class BaseItem extends foundry.abstract.Document {
+       static TYPES: string[];
+       get name(): string;
+       get type(): string;
+       get sort(): number;
+     }
     }
   }
 }

@@ -21,10 +21,10 @@ interface HookCallbacks {
 
   controlToken: (token: Token, controlled: boolean) => void
 
-  preUpdateItem: (item: Item, changes: unknown, options: unknown) => boolean | void
-  createItem: (item: Item, options: unknown, userId: string) => void
-  deleteItem: (item: Item, options: unknown, userId: string) => void
-  updateItem: (item: Item, changes: unknown, options: unknown, userId: string) => void
+  preUpdateItem: (item: Item, changes: Partial<foundry.documents.BaseItemFields>, options: DocumentModificationContext) => boolean | void
+  createItem: (item: Item, options: DocumentModificationContext, userId: string) => void
+  deleteItem: (item: Item, options: DocumentModificationContext, userId: string) => void
+  updateItem: (item: Item, changes: Partial<foundry.documents.BaseItemFields>, options: DocumentModificationContext, userId: string) => void
 }
 
 type HooksType = {
