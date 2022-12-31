@@ -2,8 +2,10 @@ import { ItemConstructor } from './constructors';
 
 declare global {
 
-  class Item extends ItemConstructor {
-    get actor(): Actor | null;
+  class Item<
+    ActorType extends Actor = Actor,
+  > extends ItemConstructor {
+    get actor(): ActorType | null;
   }
 }
 
