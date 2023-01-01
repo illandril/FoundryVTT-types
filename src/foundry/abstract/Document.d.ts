@@ -1,6 +1,10 @@
 declare global {
   namespace foundry {
     namespace abstract {
+      type DocumentFields = {
+        _id: string
+      };
+
       class Document extends foundry.abstract.DataModel {
         get id(): string;
         get system(): unknown;

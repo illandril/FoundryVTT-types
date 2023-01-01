@@ -6,9 +6,9 @@ declare global {
     ItemType extends Item = Item,
     ActiveEffectType extends ActiveEffect = ActiveEffect,
   > extends ActorConstructor {
-    get effects(): EmbeddedCollection<string, ActiveEffectType>;
+    get effects(): foundry.abstract.EmbeddedCollection<string, ActiveEffectType>;
     get temporaryEffects(): ActiveEffectType[];
-    get items(): EmbeddedCollection<string, ItemType>;
+    get items(): foundry.abstract.EmbeddedCollection<string, ItemType>;
   }
 }
 

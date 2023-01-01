@@ -15,7 +15,7 @@ interface HookCallbacks {
   canvasTearDown: (canvas: Canvas) => void
   canvasPan: (canvas: Canvas, constrained: CanvasViewPosition) => void
 
-  renderActorSheet: (actorSheet: Application, element: JQuery) => void
+  renderActorSheet: (actorSheet: ActorSheet, element: JQuery) => void
   renderChatLog: (chatLog: Application, element: JQuery) => void
   renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void
 

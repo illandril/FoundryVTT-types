@@ -1,7 +1,7 @@
 declare global {
   namespace foundry {
     namespace documents {
-     type BaseItemFields = {
+     type BaseItemFields = foundry.abstract.DocumentFields & {
        name: string
        type: string
        sort: number
