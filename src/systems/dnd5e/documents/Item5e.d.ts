@@ -64,15 +64,15 @@ declare global {
             threshold?: number | null
             damage?: string
           }
-          damage: {
-            parts: unknown[]
-            versatile: string
+          damage?: {
+            parts?: unknown[]
+            versatile?: string
           }
           formula?: string
           save?: {
-            ability: keyof dnd5e.config.abilities | '' | null
-            dc: number | null
-            scaling: string
+            ability?: keyof dnd5e.config.abilities | '' | null
+            dc?: number | null
+            scaling?: string
           }
         };
 
@@ -96,9 +96,7 @@ declare global {
             value?: number
             weightless?: boolean
           }
-          currency?: {
-            [key: keyof dnd5e.config.currencies]: number
-          }
+          currency?: Record<keyof dnd5e.config.currencies, number>
         };
 
         type Class = ItemDescription & {
