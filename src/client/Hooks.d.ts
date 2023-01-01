@@ -41,7 +41,12 @@ type HooksType = {
   callAll: <K extends keyof HookCallbacks>(
     hook: K,
     ...args: Parameters<HookCallbacks[K]>,
-  ) => void
+  ) => true
+
+  call: <K extends keyof HookCallbacks>(
+    hook: K,
+    ...args: Parameters<HookCallbacks[K]>,
+  ) => boolean
 };
 
 declare global {
