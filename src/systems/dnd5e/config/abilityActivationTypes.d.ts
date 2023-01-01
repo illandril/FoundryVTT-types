@@ -14,6 +14,7 @@ declare global {
         reaction: 'Reaction'
         special: 'Special'
       }
+      const abilityActivationTypes: abilityActivationTypes;
     }
   }
 }

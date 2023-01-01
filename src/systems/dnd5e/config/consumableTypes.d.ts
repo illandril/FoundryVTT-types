@@ -11,6 +11,7 @@ declare global {
         trinket: 'Trinket'
         wand: 'Wand'
       }
+      const consumableTypes: consumableTypes;
     }
   }
 }

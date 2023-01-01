@@ -9,6 +9,7 @@ declare global {
         wis: 'Wisdom'
         cha: 'Charisma'
       }
+      const abilities: abilities;
     }
   }
 }

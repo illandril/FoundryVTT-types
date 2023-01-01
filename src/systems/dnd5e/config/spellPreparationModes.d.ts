@@ -8,6 +8,7 @@ declare global {
         atwill: 'At-Will'
         innate: 'Innate Spellcasting'
       }
+      const spellPreparationModes: spellPreparationModes;
     }
   }
 }

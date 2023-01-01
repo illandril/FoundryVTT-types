@@ -4,6 +4,7 @@ import './abilityConsumptionTypes';
 import './consumableTypes';
 import './currencies';
 import './distanceUnits';
+import './hitDieTypes';
 import './itemActionTypes';
 import './limitedUsePeriods';
 import './spellPreparationModes';

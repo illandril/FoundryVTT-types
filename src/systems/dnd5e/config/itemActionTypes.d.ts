@@ -12,6 +12,7 @@ declare global {
         util: 'Utility'
         other: 'Other'
       }
+      const itemActionTypes: itemActionTypes;
     }
   }
 }

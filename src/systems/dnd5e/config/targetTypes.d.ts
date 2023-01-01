@@ -18,6 +18,7 @@ declare global {
         square: 'Square'
         wall: 'Wall'
       }
+      const targetTypes: targetTypes;
     }
   }
 }

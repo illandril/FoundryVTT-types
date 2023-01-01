@@ -9,6 +9,7 @@ declare global {
         pact: 'Pact Magic'
         artificer: 'Artificer'
       }
+      const spellProgression: spellProgression;
     }
   }
 }

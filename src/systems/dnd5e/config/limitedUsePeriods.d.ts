@@ -7,6 +7,7 @@ declare global {
         lr: 'Long Rest'
         sr: 'Short Rest'
       }
+      const limitedUsePeriods: limitedUsePeriods;
     }
   }
 }

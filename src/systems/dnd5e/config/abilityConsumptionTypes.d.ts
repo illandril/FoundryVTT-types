@@ -8,6 +8,7 @@ declare global {
         hitDice: 'Hit Dice'
         material: 'Material'
       }
+      const abilityConsumptionTypes: abilityConsumptionTypes;
     }
   }
 }

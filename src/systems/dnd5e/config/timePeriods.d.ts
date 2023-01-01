@@ -13,6 +13,7 @@ declare global {
         turn: 'Turns'
         year: 'Years'
       }
+      const timePeriods: timePeriods;
     }
   }
 }

@@ -7,6 +7,7 @@ declare global {
         none: 'None'
         level: 'Spell Level'
       }
+      const spellScalingModes: spellScalingModes;
     }
   }
 }

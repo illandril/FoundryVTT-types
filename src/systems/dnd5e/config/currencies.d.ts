@@ -17,6 +17,7 @@ declare global {
         pp: Currency
         sp: Currency
       }
+      const currencies: currencies;
     }
   }
 }

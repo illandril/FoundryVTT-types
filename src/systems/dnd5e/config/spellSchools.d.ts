@@ -11,6 +11,7 @@ declare global {
         nec: 'Necromancy'
         trs: 'Transmutation'
       }
+      const spellSchools: spellSchools;
     }
   }
 }

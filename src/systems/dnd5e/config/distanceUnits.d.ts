@@ -12,6 +12,7 @@ declare global {
         spec: 'Special'
         touch: 'Touch'
       }
+      const distanceUnits: distanceUnits;
     }
   }
 }
