@@ -107,7 +107,12 @@ declare global {
           spells?: Record<`spell${SPELL_LEVEL}` | 'pact', undefined | {
             value?: number
             override?: string | number | null
-          }>
+            max?: number
+          }> & {
+            pact?: {
+              level?: number
+            }
+          }
 
           bonuses?: Record<'mwak' | 'rwak' | 'msak' | 'rsak', undefined | {
             attack?: string
