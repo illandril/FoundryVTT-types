@@ -7,5 +7,6 @@ declare global {
     toRadians: (degree: number) => number
     normalizeRadians: (rad: number) => number
   }
-
 }
+
+export {};
