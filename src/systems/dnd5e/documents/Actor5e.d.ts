@@ -5,14 +5,14 @@ declare global {
     namespace documents {
       namespace ActorSystemData {
         type Common = {
-          abilities?: Record<keyof dnd5e.config.abilities, undefined | {
+          abilities?: Partial<Record<keyof dnd5e.config.abilities, {
             value?: number
             proficient?: number
             bonuses?: {
               check?: string
               save?: string
             }
-          }>
+          }>>
 
           attributes?: {
             ac?: {
@@ -43,7 +43,7 @@ declare global {
               bonus?: number
             }
 
-            movement?: Record<keyof dnd5e.config.movementTypes, undefined | number> & {
+            movement?: Partial<Record<keyof dnd5e.config.movementTypes, number>> & {
               units?: keyof dnd5e.config.movementUnits
               hover?: boolean
             }
@@ -56,11 +56,11 @@ declare global {
             }
           }
 
-          traits?: Record< 'di' | 'dr' | 'dv', undefined | {
+          traits?: Partial<Record< 'di' | 'dr' | 'dv', {
             value?: (keyof dnd5e.config.damageTypes)[]
             bypasses?: (keyof dnd5e.config.physicalWeaponProperties)[]
             custom?: string
-          }> & {
+          }>> & {
             size?: keyof dnd5e.config.actorSizes
             ci?: {
               value?: (keyof dnd5e.config.conditionTypes)[]
@@ -68,7 +68,7 @@ declare global {
             }
           }
 
-          currency?: Record<keyof dnd5e.config.currencies, undefined | number>
+          currency?: Partial<Record<keyof dnd5e.config.currencies, number>>
         };
 
         type Creature = {
@@ -76,7 +76,7 @@ declare global {
             attunement?: {
               max?: number
             }
-            senses?: Record<keyof dnd5e.config.senses, undefined | number> & {
+            senses?: Partial<Record<keyof dnd5e.config.senses, number>> & {
               units?: keyof dnd5e.config.movementUnits
               special?: string
             }
@@ -88,14 +88,14 @@ declare global {
             race?: string
           }
 
-          skills?: Record<keyof dnd5e.config.skills, undefined | {
+          skills?: Partial<Record<keyof dnd5e.config.skills, {
             value?: number
             ability?: keyof dnd5e.config.abilities
             bonuses?: {
               check?: string
               passive?: string
             }
-          }>
+          }>>
 
           traits?: {
             languages?: {
@@ -104,20 +104,20 @@ declare global {
             }
           }
 
-          spells?: Record<`spell${SPELL_LEVEL}` | 'pact', undefined | {
+          spells?: Partial<Record<`spell${SPELL_LEVEL}` | 'pact', {
             value?: number
             override?: string | number | null
             max?: number
-          }> & {
+          }>> & {
             pact?: {
               level?: number
             }
           }
 
-          bonuses?: Record<'mwak' | 'rwak' | 'msak' | 'rsak', undefined | {
+          bonuses?: Partial<Record<'mwak' | 'rwak' | 'msak' | 'rsak', {
             attack?: string
             damage?: string
-          }> & {
+          }>> & {
             abilities?: {
               check?: string
               save?: string
@@ -152,12 +152,12 @@ declare global {
             bond?: string
             flaw?: string
           }
-          resources?: Record<'primary' | 'secondary' | 'tertiary', undefined | {
+          resources?: Partial<Record<'primary' | 'secondary' | 'tertiary', {
             value?: number
             max?: number
             sr?: number
             lr?: number
-          }>
+          }>>
           traits?: {
             weaponProf?: {
               value?: unknown[]

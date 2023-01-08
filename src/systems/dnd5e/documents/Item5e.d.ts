@@ -96,7 +96,7 @@ declare global {
             value?: number
             weightless?: boolean
           }
-          currency?: Record<keyof dnd5e.config.currencies, undefined | number>
+          currency?: Partial<Record<keyof dnd5e.config.currencies, number>>
         };
 
         type Class = ItemDescription & {
