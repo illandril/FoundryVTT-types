@@ -5,12 +5,22 @@ declare global {
    */
   class ClientSettings {
     register<N extends string, K extends string, T extends ClientSettings.Values[`${N}.${K}`]>(module: N, key: K, data: ClientSettings.Config<T>): void;
+    registerMenu(module: N, key: K, data: ClientSettings.SubmenuConfig): void;
 
     get<N extends string, K extends string>(module: N, key: K): ClientSettings.Values[`${N}.${K}`];
     set<N extends string, K extends string>(module: N, key: K, value: ClientSettings.Values[`${N}.${K}`]): void;
   }
 
   namespace ClientSettings {
+    type SubmenuConfig = {
+      name: string
+      label: string
+      hint: string
+      icon: string
+      type: FormApplication
+      restricted: boolean
+    };
+
     type TypeConstructor<T = unknown> =
       T extends string ? typeof String
         : T extends number ? typeof Number
