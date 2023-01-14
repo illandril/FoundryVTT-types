@@ -4,6 +4,11 @@ declare global {
   namespace dnd5e {
     namespace documents {
       namespace ItemSystemData {
+        type Spellcasting = {
+          progression?: keyof dnd5e.config.spellProgression | null | ''
+          ability?: keyof dnd5e.config.abilities | null
+        };
+
         type ItemDescription = {
           description?: {
             value?: string
@@ -100,10 +105,18 @@ declare global {
         };
 
         type Class = ItemDescription & {
+          identifier?: string
           levels?: number
-          spellcasting?: {
-            progression?: keyof dnd5e.config.spellProgression | null | ''
+          hitDice?: typeof dnd5e.config.hitDieTypes[number]
+          hitDiceUsed?: number
+          advancement?: unknown[]
+          saves?: unknown[]
+          skills?: {
+            number?: number
+            choices?: unknown[]
+            value?: unknown[]
           }
+          spellcasting?: Spellcasting
         };
 
         type Consumable = ItemDescription & PhysicalItem & ActivatedEffect & Action & {
@@ -174,10 +187,7 @@ declare global {
           identifier?: string
           classIdentifier?: string
           advancement?: unknown[]
-          spellcapsting?: {
-            progression?: keyof dnd5e.config.spellProgression
-            ability?: keyof dnd5e.config.abilities
-          }
+          spellcasting?: Spellcasting
         };
 
         type Weapon = ItemDescription & PhysicalItem & ActivatedEffect & Action & Mountable & {
@@ -193,6 +203,24 @@ declare global {
       class Item5e extends Item<Actor5e> {
         get system(): dnd5e.documents.ItemSystemData.Any;
         get type(): 'weapon' | 'equipment' | 'consumable' | 'tool' | 'loot' | 'background' | 'class' | 'subclass' | 'spell' | 'feat' | 'backpack';
+        get abilityMod(): keyof dnd5e.config.abilities | null;
+        get identifier(): string;
+        get hasAdvancement(): boolean;
+        get hasAttack(): boolean;
+        get hasDamage(): boolean;
+        get isVersatile(): boolean;
+        get isHealing(): boolean;
+        get isOriginalClass(): boolean | null;
+        get class(): Item5e | null | undefined;
+        get subclass(): Item5e | null | undefined;
+        get hasSave(): boolean;
+        get hasAbilityCheck(): boolean;
+        get hasTarget(): boolean;
+        get hasAreaTarget(): boolean;
+        get hasLimitedUses(): boolean;
+        get isArmor(): boolean;
+        get spellcasting(): Spellcasting | undefined;
+        get areEffectsSuppressed(): boolean;
       }
     }
   }
