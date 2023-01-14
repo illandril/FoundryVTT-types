@@ -29,13 +29,13 @@ declare global {
     // readonly clipboard: ClipboardHelper;
     // readonly tours: Tours;
     // readonly documentIndex: DocumentIndex;
-    // readonly debug: boolean;
-    // readonly loading: boolean;
-    // readonly ready: boolean;
-    // readonly world: World | null;
-    // readonly system: System | null;
-    // readonly modules: foundry.utils.Collection<string, Module>;
-    // readonly version: string;
+    readonly debug: boolean;
+    readonly loading: boolean;
+    readonly ready: boolean;
+    readonly world: World;
+    readonly system: System;
+    readonly modules: foundry.utils.Collection<string, Module>;
+    readonly version: string;
 
 
     // readonly users: Users;
@@ -50,10 +50,10 @@ declare global {
     // readonly tables: RollTables;
     // readonly cards: CardStacks;
     // readonly messages: Messages;
-    // get isAdmin(): boolean;
+    get isAdmin(): boolean;
     get user(): User | null;
     // get combat(): Combat | undefined;
-    // get paused(): boolean;
+    get paused(): boolean;
 
     // get activeTool(): string;
   }

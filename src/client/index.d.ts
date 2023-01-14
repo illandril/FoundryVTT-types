@@ -7,6 +7,7 @@ import './Game';
 import './Hooks';
 import './Localization';
 import './MouseInteractionManager';
+import './packages';
 import './Templates';
 import './ui';
 import './variables';
