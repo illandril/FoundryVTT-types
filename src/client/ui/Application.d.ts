@@ -1,12 +1,18 @@
 declare global {
-  abstract class Application<Options extends ApplicationOptions = ApplicationOptions> {
+  abstract class Application<
+    Options extends ApplicationOptions = ApplicationOptions,
+  > {
     constructor(options: Options);
 
     static get defaultOptions(): ApplicationOptions;
 
+    options: Options;
+
     get element(): JQuery;
     get rendered(): boolean;
     get position(): Application.Position;
+    get title(): string;
+
     setPosition(position?: Partial<Omit<Application.Position, 'height'> & {
       height: 'auto' | number | null
     }>): Application.Position;
@@ -33,6 +39,10 @@ declare global {
       renderContext: string
       renderData: unknown
     };
+  }
+
+  interface Window {
+    Application: typeof Application
   }
 }
 

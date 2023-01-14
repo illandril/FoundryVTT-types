@@ -1,18 +1,22 @@
 declare global {
   type ApplicationOptions = {
-    baseApplication?: string
-    width?: number
-    height?: string | number
-    top?: number
-    left?: number
-    scale?: number
-    popOut?: boolean
-    minimizable?: boolean
-    resizable?: boolean
-    id?: string
-    classes?: string[]
-    title?: string
-    template?: string
+    baseApplication: string | null
+    width: number | null
+    height: string | number | null
+    top: number | null
+    left: number | null
+    scale: number | null
+    popOut: boolean
+    minimizable: boolean
+    resizable: boolean
+    id: string
+    classes: string[]
+    dragDrop: unknown[]
+    tabs: unknown[]
+    filters: unknown[]
+    title: string
+    template: string | null
+    scrollY: unknown[]
   };
 }
 
