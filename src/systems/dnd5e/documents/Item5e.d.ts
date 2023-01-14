@@ -219,7 +219,7 @@ declare global {
         get hasAreaTarget(): boolean;
         get hasLimitedUses(): boolean;
         get isArmor(): boolean;
-        get spellcasting(): Spellcasting | undefined;
+        get spellcasting(): dnd5e.documents.ItemSystemData.Spellcasting | undefined;
         get areEffectsSuppressed(): boolean;
       }
     }
