@@ -17,7 +17,7 @@ declare global {
       label: string
       hint: string
       icon: string
-      type: FormApplication
+      type: typeof FormApplication
       restricted: boolean
     };
 
