@@ -12,6 +12,13 @@ declare global {
       DomParser: (options: { validate: true }) => { parse(html: string): AstNode }
       Serializer: () => { serialize(node: AstNode): string }
     }
+    dom: {
+      DOMUtils: {
+        DOM: {
+          createFragment: (html: string) => DocumentFragment
+        }
+      }
+    }
   };
 
   interface Window {
