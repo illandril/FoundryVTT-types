@@ -1,8 +1,4 @@
 declare global {
-  /**
-   * The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience.
-   * The singleton instance of the Game class is available as the global variable game.
-   */
   class ClientSettings {
     register<T>(module: string, key: string, data: ClientSettings.Config<T>): void;
     get(module: string, key: string): unknown;
