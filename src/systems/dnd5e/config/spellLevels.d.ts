@@ -2,16 +2,16 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface spellLevels {
-        0: 'Cantrip'
-        1: '1st Level'
-        2: '2nd Level'
-        3: '3rd Level'
-        4: '4th Level'
-        5: '5th Level'
-        6: '6th Level'
-        7: '7th Level'
-        8: '8th Level'
-        9: '9th Level'
+        0: string
+        1: string
+        2: string
+        3: string
+        4: string
+        5: string
+        6: string
+        7: string
+        8: string
+        9: string
       }
       const spellLevels: spellLevels;
     }

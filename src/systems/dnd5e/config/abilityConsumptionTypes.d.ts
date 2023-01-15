@@ -2,11 +2,11 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface abilityConsumptionTypes {
-        ammo: 'Ammunition'
-        attribute: 'Attribute'
-        charges: 'Item Uses'
-        hitDice: 'Hit Dice'
-        material: 'Material'
+        ammo: string
+        attribute: string
+        charges: string
+        hitDice: string
+        material: string
       }
       const abilityConsumptionTypes: abilityConsumptionTypes;
     }

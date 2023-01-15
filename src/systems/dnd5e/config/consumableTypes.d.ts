@@ -2,14 +2,14 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface consumableTypes {
-        ammo: 'Ammunition'
-        food: 'Food'
-        poison: 'Poison'
-        potion: 'Potion'
-        rod: 'Rod'
-        scroll: 'Scroll'
-        trinket: 'Trinket'
-        wand: 'Wand'
+        ammo: string
+        food: string
+        poison: string
+        potion: string
+        rod: string
+        scroll: string
+        trinket: string
+        wand: string
       }
       const consumableTypes: consumableTypes;
     }

@@ -2,10 +2,10 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface senses {
-        blindsight: 'Blindsight'
-        darkvision: 'Darkvision'
-        tremorsense: 'Tremorsense'
-        truesight: 'Truesight'
+        blindsight: string
+        darkvision: string
+        tremorsense: string
+        truesight: string
       }
       const senses: senses;
     }

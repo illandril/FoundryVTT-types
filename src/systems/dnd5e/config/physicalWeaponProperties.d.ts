@@ -2,9 +2,9 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface physicalWeaponProperties {
-        ada: 'Adamantine'
-        mgc: 'Magical'
-        sil: 'Silvered'
+        ada: string
+        mgc: string
+        sil: string
       }
       const physicalWeaponProperties: physicalWeaponProperties;
     }

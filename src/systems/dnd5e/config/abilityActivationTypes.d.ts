@@ -2,17 +2,17 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface abilityActivationTypes {
-        action: 'Action'
-        bonus: 'Bonus Action'
-        crew: 'Crew Action'
-        day: 'Days'
-        hour: 'Hours'
-        lair: 'Lair Action'
-        legendary: 'Legendary Action'
-        minute: 'Minutes'
-        none: 'None'
-        reaction: 'Reaction'
-        special: 'Special'
+        action: string
+        bonus: string
+        crew: string
+        day: string
+        hour: string
+        lair: string
+        legendary: string
+        minute: string
+        none: string
+        reaction: string
+        special: string
       }
       const abilityActivationTypes: abilityActivationTypes;
     }

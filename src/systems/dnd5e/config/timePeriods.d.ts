@@ -2,16 +2,16 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface timePeriods {
-        day: 'Days'
-        hour: 'Hours'
-        inst: 'Instantaneous'
-        minute: 'Minutes'
-        month: 'Months'
-        perm: 'Permanent'
-        round: 'Rounds'
-        spec: 'Special'
-        turn: 'Turns'
-        year: 'Years'
+        day: string
+        hour: string
+        inst: string
+        minute: string
+        month: string
+        perm: string
+        round: string
+        spec: string
+        turn: string
+        year: string
       }
       const timePeriods: timePeriods;
     }

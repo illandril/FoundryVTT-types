@@ -2,21 +2,21 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface targetTypes {
-        ally: 'Ally'
-        cone: 'Cone'
-        creature: 'Creature'
-        cube: 'Cube'
-        cylinder: 'Cylinder'
-        enemy: 'Enemy'
-        line: 'Line'
-        none: 'None'
-        object: 'Object'
-        radius: 'Radius'
-        self: 'Self'
-        space: 'Space'
-        sphere: 'Sphere'
-        square: 'Square'
-        wall: 'Wall'
+        ally: string
+        cone: string
+        creature: string
+        cube: string
+        cylinder: string
+        enemy: string
+        line: string
+        none: string
+        object: string
+        radius: string
+        self: string
+        space: string
+        sphere: string
+        square: string
+        wall: string
       }
       const targetTypes: targetTypes;
     }

@@ -2,10 +2,10 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface movementUnits {
-        ft: 'Feet'
-        km: 'Kilometers'
-        m: 'Meters'
-        mi: 'Miles'
+        ft: string
+        km: string
+        m: string
+        mi: string
       }
       const movementUnits: movementUnits;
     }

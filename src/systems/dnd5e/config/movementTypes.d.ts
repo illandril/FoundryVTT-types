@@ -2,11 +2,11 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface movementTypes {
-        burrow: 'Burrow'
-        climb: 'Climb'
-        fly: 'Fly'
-        swim: 'Swim'
-        walk: 'Walk'
+        burrow: string
+        climb: string
+        fly: string
+        swim: string
+        walk: string
       }
       const movementTypes: movementTypes;
     }

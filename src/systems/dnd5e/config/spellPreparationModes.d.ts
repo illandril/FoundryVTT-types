@@ -2,11 +2,11 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface spellPreparationModes {
-        prepared: 'Prepared'
-        pact: 'Pact Magic'
-        always: 'Always Prepared'
-        atwill: 'At-Will'
-        innate: 'Innate Spellcasting'
+        prepared: string
+        pact: string
+        always: string
+        atwill: string
+        innate: string
       }
       const spellPreparationModes: spellPreparationModes;
     }
