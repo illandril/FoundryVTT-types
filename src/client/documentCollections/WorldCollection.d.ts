@@ -1,5 +1,6 @@
 declare global {
-  class WorldCollection<K, V> extends DocumentCollection<K, V> {
+  class WorldCollection<K, V extends foundry.abstract.Document>
+    extends DocumentCollection<K, V> {
   }
 }
 

@@ -211,7 +211,7 @@ declare global {
           }
         };
 
-        type Vehicle = Comon & {
+        type Vehicle = Common & {
           vehicleType?: 'string'
           attributes?: {
             ac?: {
@@ -244,7 +244,10 @@ declare global {
         type Any = Character | NPC | Vehicle;
       }
 
-      class Actor5e extends Actor<dnd5e.documents.Item5e, dnd5e.documents.ActiveEffect5e> {
+      class Actor5e extends Actor {
+        get effects(): foundry.abstract.EmbeddedCollection<string, dnd5e.documents.ActiveEffect5e>;
+        get temporaryEffects(): dnd5e.documents.ActiveEffect5e[];
+        get items(): foundry.abstract.EmbeddedCollection<string, dnd5e.documents.Item5e>;
         get system(): dnd5e.documents.ActorSystemData.Any;
         get armor(): dnd5e.documents.Item5e | null;
         get shield(): dnd5e.documents.Item5e | null;

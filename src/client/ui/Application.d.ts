@@ -13,9 +13,9 @@ declare global {
     get position(): Application.Position;
     get title(): string;
 
-    setPosition(position?: Partial<Omit<Application.Position, 'height'> & {
-      height: 'auto' | number | null
-    }>): Application.Position;
+    setPosition(position?: Partial<Omit<Application.Position, 'height'>> & {
+      height?: 'auto' | number | null
+    }): Application.Position | void;
 
     render(force?: boolean, options?: Application.RenderOptions): this;
   }

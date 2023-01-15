@@ -1,26 +1,24 @@
-type CollectionFilter<K, V, C extends Map<K, V>> = (value: V, index: number, collection: C) => boolean;
+type CollectionFilter<K, V> = (value: V, index: number, collection: foundry.utils.Collection<K, V>) => boolean;
 
 declare global {
   namespace foundry {
     namespace utils {
-      class Collection<K, V> extends Map<K, V> {
+      class Collection<K, V> {
         constructor(entries?: readonly (readonly [K, V])[] | null);
 
-        [Symbol.iterator](): IterableIterator<V> {
-          return this.values();
-        }
+        [Symbol.iterator](): IterableIterator<[K, V]>;
 
         get contents(): V[];
 
         /**
          * Find an entry in the Map using a functional condition.
          */
-        find(condition: CollectionFilter<K, V, Collection<K, V>>): V | undefined;
+        find(condition: CollectionFilter<K, V>): V | undefined;
 
         /**
          * Filter the Collection, returning an Array of entries which match a functional condition.
          */
-        filter(condition: CollectionFilter<K, V, Collection<K, V>>): V[];
+        filter(condition: CollectionFilter<K, V>): V[];
 
         /**
          * Apply a function to each element of the collection
@@ -69,7 +67,7 @@ declare global {
         /**
          * Test whether a condition is met by some entry in the Collection.
          */
-        some(condition: CollectionFilter<K, V, Collection<K, V>>): boolean;
+        some(condition: CollectionFilter<K, V>): boolean;
       }
     }
   }

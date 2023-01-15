@@ -1,8 +1,4 @@
-
-import { Application } from './ui/Application';
-
-type HookCallback<Args> = (...args: Args) => void;
-type EmptyCallback = HookCallback<void>;
+type EmptyCallback = () => void;
 
 type HooksType = {
   on: <K extends keyof HookCallbacks>(

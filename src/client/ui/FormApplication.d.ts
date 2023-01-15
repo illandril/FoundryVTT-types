@@ -12,9 +12,9 @@ declare global {
     get isEditable(): boolean;
 
     getData(options?: Options): object;
-    activateListeners(html: JQuery);
+    activateListeners(html: JQuery): void;
 
-    async _updateObject(event: Event, formData: object): Promise<void>;
+    _updateObject(event: Event, formData: object): Promise<void>;
   }
 
   interface Window {

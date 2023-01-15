@@ -1,9 +1,11 @@
 declare global {
-  class BasePlaceableHUD<T extends PlaceableObject> extends Application {
-    get object(): T | undefined;
+  class BasePlaceableHUD<
+    ObjectType extends PlaceableObject<foundry.abstract.Document>,
+  > extends Application {
+    get object(): ObjectType | undefined;
 
-    setPosition(position?: Omit<Application.Position, 'height'> & {
-      height: 'auto' | number | null
+    setPosition(position?: Partial<Omit<Application.Position, 'height'>> & {
+      height?: 'auto' | number | null
     }): void;
   }
 }

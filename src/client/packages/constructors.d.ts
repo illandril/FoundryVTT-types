@@ -1,10 +1,9 @@
-class ClientPackage {
+type ClientPackage = {
+  install: () => void
+  uninstall: () => void
+};
 
-}
-
-type ClientPackageMixin<T extends typeof foundry.packages.BasePackage> = {
-  new (...args: unknown[]): ClientPackage & InstanceType<T>
-} & T;
+type ClientPackageMixin<T extends typeof foundry.packages.BasePackage> = T & Pick<ClientPackage, keyof ClientPackage>;
 
 export const ModuleConstructor: ClientPackageMixin<typeof foundry.packages.BaseModule>;
 export const SystemConstructor: ClientPackageMixin<typeof foundry.packages.BaseSystem>;

@@ -13,7 +13,7 @@ declare global {
         setFlag(scope: string, key: string, value: unknown): void;
         unsetFlag(scope: string, key: string): void;
 
-        updateEmbeddedDocuments(embeddedName: string, updates?: unkown[], context?: unknown): Promise<foundry.abstract.Document[]>;
+        updateEmbeddedDocuments(embeddedName: string, updates?: unknown[], context?: unknown): Promise<foundry.abstract.Document[]>;
       }
     }
   }

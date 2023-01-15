@@ -200,7 +200,8 @@ declare global {
         type Any = Background | Backpack | Class | Consumable | Equipment | Feat | Loot | Tool | Spell | Subclass | Weapon;
       }
 
-      class Item5e extends Item<Actor5e> {
+      class Item5e extends Item {
+        get actor(): Actor5e | null;
         get system(): dnd5e.documents.ItemSystemData.Any;
         get type(): 'weapon' | 'equipment' | 'consumable' | 'tool' | 'loot' | 'background' | 'class' | 'subclass' | 'spell' | 'feat' | 'backpack';
         get abilityMod(): keyof dnd5e.config.abilities | null;

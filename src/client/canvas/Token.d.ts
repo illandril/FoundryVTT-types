@@ -3,7 +3,7 @@ declare global {
     get actor(): Actor;
     get isVisible(): boolean;
     get effects(): PIXI.Container;
-    async drawEffects(): void;
+    drawEffects(): Promise<void>;
     _refreshEffects(): void;
   }
 }

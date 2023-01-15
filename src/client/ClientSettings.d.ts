@@ -8,7 +8,7 @@ declare global {
     registerMenu<
       ObjectType extends object,
       Options extends FormApplicationOptions,
-    >(module: N, key: K, data: ClientSettings.SubmenuConfig<ObjectType, Options>): void;
+    >(module: string, key: string, data: ClientSettings.SubmenuConfig<ObjectType, Options>): void;
 
     get<N extends string, K extends string>(module: N, key: K): ClientSettings.Values[`${N}.${K}`];
     set<N extends string, K extends string>(module: N, key: K, value: ClientSettings.Values[`${N}.${K}`]): void;
@@ -52,7 +52,8 @@ declare global {
     };
 
     interface Values {
-      [key: string]: never
+      [key: string]: unknown
+      'core.chatBubbles': boolean
     }
   }
 }

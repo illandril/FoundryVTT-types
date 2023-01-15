@@ -1,8 +1,10 @@
 declare global {
-  class PlaceablesLayer<T extends PlaceableObject> extends InteractionLayer {
-    get controlled(): T[];
-    get placeables(): T[];
-    get(id: string): T | undefined;
+  class PlaceablesLayer<
+    ObjectType = PlaceableObject<foundry.abstract.Document>,
+  > extends InteractionLayer {
+    get controlled(): ObjectType[];
+    get placeables(): ObjectType[];
+    get(id: string): ObjectType | undefined;
   }
 }
 
