@@ -4,18 +4,19 @@ declare global {
    * The singleton instance of the Game class is available as the global variable game.
    */
   class ClientSettings {
-    register<N extends string, K extends string, T extends ClientSettings.Values[`${N}.${K}`]>(module: N, key: K, data: ClientSettings.Config<T>): void;
-    registerMenu<
-      ObjectType extends object,
-      Options extends FormApplicationOptions,
-    >(module: string, key: string, data: ClientSettings.SubmenuConfig<ObjectType, Options>): void;
+    register<T>(module: string, key: string, data: ClientSettings.Config<T>): void;
+    get(module: string, key: string): unknown;
+    set<T>(module: string, key: string, value: T): void;
 
-    get<N extends string, K extends string>(module: N, key: K): ClientSettings.Values[`${N}.${K}`];
-    set<N extends string, K extends string>(module: N, key: K, value: ClientSettings.Values[`${N}.${K}`]): void;
+    registerMenu<ObjectType extends object, Options extends FormApplicationOptions>(
+      module: string,
+      key: string,
+      data: ClientSettings.MenuConfig<ObjectType, Options>
+    ): void;
   }
 
   namespace ClientSettings {
-    type SubmenuConfig<
+    type MenuConfig<
       ObjectType extends object,
       Options extends FormApplicationOptions,
     > = {
@@ -50,12 +51,6 @@ declare global {
         step: number
       } : never
     };
-
-    interface Values {
-      [key: string]: unknown
-      [debugKey: `${string}.debug`]: boolean
-      'core.chatBubbles': boolean
-    }
   }
 }
 
