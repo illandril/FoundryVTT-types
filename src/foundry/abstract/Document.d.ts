@@ -17,7 +17,7 @@ declare global {
 
         testUserPermission(
           user: foundry.documents.BaseUser,
-          permission: string | number,
+          permission: keyof typeof foundry.CONST.DOCUMENT_OWNERSHIP_LEVELS | number,
           options?: { exact: boolean }
         ): boolean;
       }
