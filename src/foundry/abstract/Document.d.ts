@@ -14,6 +14,12 @@ declare global {
         unsetFlag(scope: string, key: string): void;
 
         updateEmbeddedDocuments(embeddedName: string, updates?: unknown[], context?: unknown): Promise<foundry.abstract.Document[]>;
+
+        testUserPermission(
+          user: foundry.documents.BaseUser,
+          permission: string | number,
+          options?: { exact: boolean }
+        ): boolean;
       }
     }
   }
