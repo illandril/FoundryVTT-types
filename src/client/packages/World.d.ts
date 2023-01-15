@@ -1,7 +1,6 @@
-import { WorldConstructor } from './constructors';
 
 declare global {
-  class World extends WorldConstructor {
+  class World extends foundry.packages.BaseWorld {
   }
 }
 

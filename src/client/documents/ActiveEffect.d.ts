@@ -1,7 +1,12 @@
-import { ActiveEffectConstructor } from './constructors';
+import { ClientDocument } from './ClientDocument';
 
 declare global {
-  class ActiveEffect extends ActiveEffectConstructor {
+  class ActiveEffect extends foundry.documents.BaseActiveEffect implements ClientDocument {
+    isOwner: ClientDocument['isOwner'];
+    hasPlayerOwner: ClientDocument['hasPlayerOwner'];
+    visible: ClientDocument['visible'];
+    prepareDerivedData: ClientDocument['prepareDerivedData'];
+    render: ClientDocument['render'];
   }
 }
 

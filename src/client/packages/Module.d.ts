@@ -1,7 +1,6 @@
-import { ModuleConstructor } from './constructors';
 
 declare global {
-  class Module extends ModuleConstructor {
+  class Module extends foundry.packages.BaseModule {
   }
 }
 
