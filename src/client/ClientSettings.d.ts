@@ -53,6 +53,7 @@ declare global {
 
     interface Values {
       [key: string]: unknown
+      [debugKey: `${string}.debug`]: boolean
       'core.chatBubbles': boolean
     }
   }
