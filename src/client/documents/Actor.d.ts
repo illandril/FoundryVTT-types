@@ -9,6 +9,7 @@ declare global {
     prepareDerivedData: ClientDocument['prepareDerivedData'];
     render: ClientDocument['render'];
 
+    get sheet(): ActorSheet | null;
     get effects(): foundry.abstract.EmbeddedCollection<string, ActiveEffect>;
     get temporaryEffects(): ActiveEffect[];
     get items(): foundry.abstract.EmbeddedCollection<string, Item>;

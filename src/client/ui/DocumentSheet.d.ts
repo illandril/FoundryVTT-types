@@ -1,5 +1,8 @@
 declare global {
-  class DocumentSheet extends FormApplication {
+  class DocumentSheet<
+    ObjectType extends object = object,
+    Options extends DocumentSheetOptions = DocumentSheetOptions,
+  > extends FormApplication<ObjectType, Options> {
   }
 }
 
