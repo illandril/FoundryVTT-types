@@ -6,7 +6,7 @@ declare global {
       class Collection<K, V> {
         constructor(entries?: readonly (readonly [K, V])[] | null);
 
-        [Symbol.iterator](): IterableIterator<[K, V]>;
+        [Symbol.iterator](): IterableIterator<V>;
 
         get contents(): V[];
 
