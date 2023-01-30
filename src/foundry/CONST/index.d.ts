@@ -2,6 +2,7 @@ import './CHAT_MESSAGE_TYPES';
 import './DOCUMENT_OWNERSHIP_LEVELS';
 import './DRAWING_TYPES';
 import './GRID_TYPES';
+import './KEYBINDING_PRECEDENCE';
 import './TOKEN_DISPOSITIONS';
 import './USER_ROLES';
 

@@ -4,6 +4,7 @@ declare global {
   > extends InteractionLayer {
     get controlled(): ObjectType[];
     get placeables(): ObjectType[];
+    get hover(): ObjectType | null;
     get(id: string): ObjectType | undefined;
   }
 }

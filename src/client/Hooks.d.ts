@@ -40,6 +40,9 @@ declare global {
 
     controlToken: (token: Token, controlled: boolean) => void
     hoverToken: (token: Token, hovered: boolean) => void
+    refreshToken: (token: Token) => void
+
+    highlightObjects: (higlight: boolean) => void
 
     preUpdateItem: (item: Item, changes: Partial<foundry.documents.BaseItemFields>, options: DocumentModificationContext) => boolean | void
     createItem: (item: Item, options: DocumentModificationContext, userId: string) => void
