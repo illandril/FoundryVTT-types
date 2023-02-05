@@ -6,6 +6,8 @@ declare global {
         get name(): string;
         get character(): foundry.documents.BaseActor | null;
         get avatar(): string;
+
+        hasRole(role: string | number, options?: { exact?: boolean }): boolean;
       }
     }
   }
