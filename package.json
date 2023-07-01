@@ -30,7 +30,7 @@
     "pixi.js": "6.5.2"
   },
   "devDependencies": {
-    "@illandril/eslint-config-foundryvtt": "^1.8.2",
+    "@illandril/eslint-config-foundryvtt": "^1.8.4",
     "npm-run-all2": "^6.0.5",
     "typescript": "^5.1.6"
   }
