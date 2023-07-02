@@ -1,5 +1,4 @@
 import './abilities';
-import './abilityAbbreviations';
 import './abilityActivationTypes';
 import './abilityConsumptionTypes';
 import './actorSizes';
