@@ -8,6 +8,7 @@ declare global {
   namespace dnd5e {
     namespace config {
       interface abilities {
+        [index: string]: AbilityConfiguration
         str: AbilityConfiguration
         dex: AbilityConfiguration
         con: AbilityConfiguration
