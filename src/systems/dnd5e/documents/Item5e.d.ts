@@ -75,7 +75,7 @@ declare global {
           }
           formula?: string
           save?: {
-            ability?: keyof dnd5e.config.abilities | '' | null
+            ability?: keyof dnd5e.config.abilities | null
             dc?: number | null
             scaling?: string
           }
