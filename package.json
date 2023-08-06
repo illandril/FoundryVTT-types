@@ -1,6 +1,6 @@
 {
   "name": "@illandril/foundryvtt-types",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "Type definitions for the Foundry VTT client, used by Illandril's modules",
   "types": "./src/index.d.ts",
   "type": "module",
