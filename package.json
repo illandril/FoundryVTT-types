@@ -27,7 +27,7 @@
   "dependencies": {
     "@types/jquery": "^3.5.16",
     "@types/css-font-loading-module": "^0.0.8",
-    "handlebars": "4.7.7",
+    "handlebars": "4.7.8",
     "pixi.js": "7.2.4"
   },
   "devDependencies": {
