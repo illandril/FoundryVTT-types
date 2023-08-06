@@ -9,6 +9,7 @@ declare global {
         [Symbol.iterator](): IterableIterator<V>;
 
         get contents(): V[];
+        get size(): number;
 
         /**
          * Find an entry in the Map using a functional condition.
