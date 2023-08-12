@@ -6,6 +6,7 @@ declare global {
     get center(): PIXI.Point;
     get mouseInteractionManager(): MouseInteractionManager;
     get bounds(): PIXI.Rectangle;
+    get scene(): Scene;
 
     control(options?: { releaseOthers?: boolean }): boolean;
     release(options?: { trigger?: boolean }): boolean;
