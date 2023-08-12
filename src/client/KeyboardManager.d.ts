@@ -5,6 +5,8 @@ declare global {
       SHIFT: string
       ALT: string
     };
+
+    static getKeycodeDisplayString(code: string): string;
   }
 }
 

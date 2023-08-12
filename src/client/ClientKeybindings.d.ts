@@ -1,6 +1,7 @@
 declare global {
   class ClientKeybindings {
     register(module: string, key: string, data: ClientKeybindings.KeybindingActionConfig): void;
+    get(module: string, key: string): ClientKeybindings.KeybindingActionBinding[];
   }
 
   namespace ClientKeybindings {
