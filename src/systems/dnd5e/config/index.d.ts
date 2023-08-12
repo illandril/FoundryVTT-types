@@ -2,6 +2,7 @@ import './abilities';
 import './abilityActivationTypes';
 import './abilityConsumptionTypes';
 import './actorSizes';
+import './characterFlags';
 import './conditionTypes';
 import './consumableTypes';
 import './currencies';
