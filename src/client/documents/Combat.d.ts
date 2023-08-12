@@ -11,6 +11,7 @@ declare global {
 
     get started(): boolean;
     get combatant(): Combatant;
+    get scene(): Scene;
   }
 }
 

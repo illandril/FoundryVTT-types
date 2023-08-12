@@ -8,7 +8,6 @@ declare global {
       };
 
       class BaseCombat extends foundry.abstract.Document {
-        get scene(): BaseScene;
         get active(): BaseCombatFields['active'];
         get round(): BaseCombatFields['round'];
         get turn(): BaseCombatFields['turn'];
