@@ -9,6 +9,14 @@ declare global {
     render: ClientDocument['render'];
 
     static getSpeaker(options?: { scene: Scene, actor: Actor, token: TokenDocument, alias: string }): SpeakerType;
+    static create(data: {
+      speaker: {
+        alias?: string
+        actor?: Actor
+        token?: TokenDocument
+        scene?: Scene
+      }
+    }): ChatMessage;
 
     get alias(): string;
     get isAuthor(): boolean;

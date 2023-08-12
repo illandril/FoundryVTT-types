@@ -1,6 +1,8 @@
 import './BaseActiveEffect';
 import './BaseActor';
 import './BaseChatMessage';
+import './BaseCombat';
+import './BaseCombatant';
 import './BaseDrawing';
 import './BaseItem';
 import './BaseScene';

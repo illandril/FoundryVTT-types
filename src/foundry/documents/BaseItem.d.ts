@@ -9,10 +9,10 @@ declare global {
 
      class BaseItem extends foundry.abstract.Document {
        static TYPES: string[];
-       get name(): string;
+       get name(): BaseItemFields['name'];
        get img(): string | null;
-       get type(): string;
-       get sort(): number;
+       get type(): BaseItemFields['type'];
+       get sort(): BaseItemFields['sort'];
      }
     }
   }

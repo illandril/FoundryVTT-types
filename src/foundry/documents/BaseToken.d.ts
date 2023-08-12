@@ -1,23 +1,46 @@
 declare global {
   namespace foundry {
     namespace documents {
+      type BaseTokenFields = foundry.abstract.DocumentFields & {
+        name: string
+
+        texture: foundry.data.TextureData
+
+        actorId: string
+        actorLink: boolean
+
+        width: number
+        height: number
+        x: number
+        y: number
+
+        effects: string[]
+        overlayEffect: string
+
+        hidden: boolean
+
+        disposition: number
+      };
+
       class BaseToken extends foundry.abstract.Document {
-        get actorId(): string;
-        get actorLink(): boolean;
+        get name(): BaseTokenFields['name'];
 
-        get texture(): foundry.data.TextureData;
+        get actorId(): BaseTokenFields['actorId'];
+        get actorLink(): BaseTokenFields['actorLink'];
 
-        get width(): number;
-        get height(): number;
-        get x(): number;
-        get y(): number;
+        get texture(): BaseTokenFields['texture'];
 
-        get effects(): string[];
-        get overlayEffect(): string;
+        get width(): BaseTokenFields['width'];
+        get height(): BaseTokenFields['height'];
+        get x(): BaseTokenFields['x'];
+        get y(): BaseTokenFields['y'];
 
-        get hidden(): boolean;
+        get effects(): BaseTokenFields['effects'];
+        get overlayEffect(): BaseTokenFields['overlayEffect'];
 
-        get disposition(): number;
+        get hidden(): BaseTokenFields['hidden'];
+
+        get disposition(): BaseTokenFields['disposition'];
       }
     }
   }

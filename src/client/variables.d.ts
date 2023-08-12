@@ -4,6 +4,9 @@ declare global {
   interface Window {
     game: typeof game
     jQuery: typeof jQuery
+    ui: {
+      notifications: Notifications
+    }
   }
 }
 

@@ -48,6 +48,21 @@ declare global {
     createItem: (item: Item, options: DocumentModificationContext, userId: string) => void
     deleteItem: (item: Item, options: DocumentModificationContext, userId: string) => void
     updateItem: (item: Item, changes: Partial<foundry.documents.BaseItemFields>, options: DocumentModificationContext, userId: string) => void
+
+    preUpdateToken: (token: TokenDocument, changes: Partial<foundry.documents.BaseTokenFields>, options: DocumentModificationContext, userId: string) => boolean | void
+    createToken: (token: TokenDocument, options: DocumentModificationContext, userId: string) => void
+    deleteToken: (token: TokenDocument, options: DocumentModificationContext, userId: string) => void
+    updateToken: (token: TokenDocument, changes: Partial<foundry.documents.BaseTokenFields>, options: DocumentModificationContext, userId: string) => void
+
+    preUpdateCombat: (combat: Combat, changes: Partial<foundry.documents.BaseCombatFields>, options: DocumentModificationContext, userId: string) => boolean | void
+    createCombat: (combat: Combat, options: DocumentModificationContext, userId: string) => void
+    deleteCombat: (combat: Combat, options: DocumentModificationContext, userId: string) => void
+    updateCombat: (combat: Combat, changes: Partial<foundry.documents.BaseCombatFields>, options: DocumentModificationContext, userId: string) => void
+
+    preUpdateCombatant: (combatant: Combatant, changes: Partial<foundry.documents.BaseCombatantFields>, options: DocumentModificationContext, userId: string) => boolean | void
+    createCombatant: (combatant: Combatant, options: DocumentModificationContext, userId: string) => void
+    deleteCombatant: (combatant: Combatant, options: DocumentModificationContext, userId: string) => void
+    updateCombatant: (combatant: Combatant, changes: Partial<foundry.documents.BaseCombatantFields>, options: DocumentModificationContext, userId: string) => void
   }
 
   const Hooks: HooksType;

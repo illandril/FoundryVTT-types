@@ -43,7 +43,7 @@ declare global {
     get actors(): Actors;
     // readonly items: Items;
     readonly scenes: Scenes;
-    // readonly combats: CombatEncounters;
+    readonly combats: CombatEncounters;
     // readonly journal: Journal;
     // readonly macros: Macros;
     // readonly playlists: Playlists;
@@ -52,7 +52,7 @@ declare global {
     // readonly messages: Messages;
     get isAdmin(): boolean;
     get user(): User | null;
-    // get combat(): Combat | undefined;
+    get combat(): Combat | undefined;
     get paused(): boolean;
 
     // get activeTool(): string;
