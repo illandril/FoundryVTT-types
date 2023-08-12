@@ -37,6 +37,7 @@ declare global {
     renderActorSheet: (actorSheet: ActorSheet, element: JQuery) => void
     renderChatLog: (chatLog: Application, element: JQuery) => void
     renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void
+    renderHeadsUpDisplay: (hud: HeadsUpDisplay, element: JQuery) => void
 
     controlToken: (token: Token, controlled: boolean) => void
     hoverToken: (token: Token, hovered: boolean) => void
