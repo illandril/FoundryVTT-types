@@ -8,6 +8,10 @@ declare global {
 
     static getKeycodeDisplayString(code: string): string;
   }
+
+  interface Window {
+    KeyboardManager: typeof KeyboardManager
+  }
 }
 
 export {};

@@ -25,6 +25,10 @@ declare global {
     menuItems: ContextMenuEntry[];
     render(target: JQuery): void;
   }
+
+  interface Window {
+    ContextMenu: typeof ContextMenu
+  }
 }
 
 export {};

@@ -23,6 +23,10 @@ declare global {
     get isContentVisible(): boolean;
     get isRoll(): boolean;
   }
+
+  interface Window {
+    ChatMessage: typeof ChatMessage
+  }
 }
 
 export {};
