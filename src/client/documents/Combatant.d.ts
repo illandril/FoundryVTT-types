@@ -10,7 +10,7 @@ declare global {
     render: ClientDocument['render'];
 
     get actor(): Actor;
-    get token(): TokenDocument;
+    get token(): TokenDocument | null | undefined;
     get combat(): Combat;
   }
 }
