@@ -10,8 +10,8 @@ declare global {
     render: ClientDocument['render'];
 
     get started(): boolean;
-    get combatant(): Combatant;
-    get scene(): Scene;
+    get combatant(): Combatant | null | undefined;
+    get scene(): Scene | null | undefined;
   }
 }
 

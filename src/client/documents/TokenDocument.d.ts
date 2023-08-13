@@ -10,7 +10,7 @@ declare global {
 
     get actor(): Actor;
     get actorLink(): boolean;
-    get object(): Token;
+    get object(): Token | null | undefined;
   }
 }
 
