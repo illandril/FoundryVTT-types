@@ -12,6 +12,7 @@ declare global {
     get actor(): Actor;
     get token(): TokenDocument | null | undefined;
     get combat(): Combat;
+    get name(): string;
   }
 }
 
