@@ -1,16 +1,5 @@
-type GridDimensions = {
-  distance: number
-  size: number
-  height: number
-  width: number
-  sceneX: number
-  sceneY: number
-  sceneWidth: number
-  sceneHeight: number
-};
-
 type BaseGridOptions = {
-  dimensions: GridDimensions
+  dimensions: SceneDimensions
 };
 
 declare global {
