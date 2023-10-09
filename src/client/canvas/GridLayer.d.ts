@@ -12,6 +12,7 @@ declare global {
     get size(): number;
     get isHex(): boolean;
     get grid(): BaseGrid;
+    get type(): number;
 
     measureDistance(origin: Position, target: Position, option?: MeasureDistanceOptions): number;
   }
