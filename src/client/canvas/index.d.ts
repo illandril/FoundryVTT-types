@@ -1,3 +1,4 @@
+import './BaseGrid';
 import './Canvas';
 import './CanvasLayer';
 import './CanvasViewPosition';
