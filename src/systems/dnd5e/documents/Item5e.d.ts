@@ -144,6 +144,11 @@ declare global {
             value?: unknown
             charged?: boolean
           }
+          requirements?: string
+          type?: {
+            value?: string
+            subtype?: string
+          }
         };
 
         type Loot = ItemDescription & PhysicalItem;
