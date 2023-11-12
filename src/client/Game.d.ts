@@ -38,7 +38,7 @@ declare global {
     readonly version: string;
 
 
-    // readonly users: Users;
+    readonly users: Users;
     // readonly folders: Folders;
     get actors(): Actors;
     // readonly items: Items;
