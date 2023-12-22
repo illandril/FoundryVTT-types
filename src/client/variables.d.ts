@@ -1,13 +1,14 @@
 declare global {
   const game: Game;
-  const ui: {
+  interface ui {
     notifications: Notifications
-  };
+    hotbar: Hotbar
+  }
 
   interface Window {
     game: typeof game
     jQuery: typeof jQuery
-    ui: typeof ui
+    ui: ui
   }
 }
 

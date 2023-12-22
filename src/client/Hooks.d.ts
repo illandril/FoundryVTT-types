@@ -1,25 +1,42 @@
 type EmptyCallback = () => void;
 
+type HookKey = keyof HookCallbacks | keyof GenericHooks;
+type HookCallback<K extends HookKey> = K extends keyof HookCallbacks
+  ? HookCallbacks[K]
+  : K extends keyof GenericHooks
+    ? GenericHooks[K]
+    : never;
+
 type HooksType = {
-  on: <K extends keyof HookCallbacks>(
+  on: <K extends HookKey>(
     hook: K,
-    fn: HookCallbacks[K],
+    fn: HookCallback<K>,
   ) => void
 
-  once: <K extends keyof HookCallbacks>(
+  once: <K extends HookKey>(
     hook: K,
-    fn: HookCallbacks[K],
+    fn: HookCallback<K>,
   ) => void
 
-  callAll: <K extends keyof HookCallbacks>(
+  callAll: <K extends HookKey>(
     hook: K,
-    ...args: Parameters<HookCallbacks[K]>,
+    ...args: Parameters<HookCallback<K>>,
   ) => true
 
-  call: <K extends keyof HookCallbacks>(
+  call: <K extends HookKey>(
     hook: K,
-    ...args: Parameters<HookCallbacks[K]>,
+    ...args: Parameters<HookCallback<K>>,
   ) => boolean
+};
+
+type GenericHooks = {
+  [index: `render${string}`]: (application: Application, element: JQuery) => void
+  [index: `preUpdate${string}`]: (document: foundry.abstract.Document, changes: unknown, options: DocumentModificationContext) => boolean | void
+  [index: `update${string}`]: (document: foundry.abstract.Document, changes: unknown, options: DocumentModificationContext) => void
+  [index: `pre${'Create' | 'Delete'}${string}`]: (document: foundry.abstract.Document, changes: unknown, options: DocumentModificationContext) => void
+  [index: `${'create' | 'delete'}${string}`]: (document: foundry.abstract.Document, changes: unknown, options: DocumentModificationContext) => void
+  [index: `${'draw' | 'refresh' | 'destroy'}${string}`]: (object: PlaceableObject<foundry.abstract.Document>) => void
+  [index: `${'control' | 'hover'}${string}`]: (object: PlaceableObject<foundry.abstract.Document>, state: boolean) => void
 };
 
 declare global {
@@ -35,9 +52,9 @@ declare global {
     canvasPan: (canvas: Canvas, constrained: CanvasViewPosition) => void
 
     renderActorSheet: (actorSheet: ActorSheet, element: JQuery) => void
-    renderChatLog: (chatLog: Application, element: JQuery) => void
     renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void
     renderHeadsUpDisplay: (hud: HeadsUpDisplay, element: JQuery) => void
+    renderHotbar: (hotbar: Hotbar, element: JQuery) => void
 
     controlToken: (token: Token, controlled: boolean) => void
     hoverToken: (token: Token, hovered: boolean) => void

@@ -45,7 +45,7 @@ declare global {
     readonly scenes: Scenes;
     readonly combats: CombatEncounters;
     // readonly journal: Journal;
-    // readonly macros: Macros;
+    readonly macros: Macros;
     // readonly playlists: Playlists;
     // readonly tables: RollTables;
     // readonly cards: CardStacks;

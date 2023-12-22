@@ -8,6 +8,7 @@ import './DrawingHUD';
 import './FormApplication';
 import './FormApplicationOptions';
 import './HeadsUpDisplay';
+import './Hotbar';
 import './Notifications';
 import './TileHUD';
 import './TokenHUD';
