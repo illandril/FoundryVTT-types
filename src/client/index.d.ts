@@ -10,6 +10,7 @@ import './KeyboardManager';
 import './Localization';
 import './MouseInteractionManager';
 import './packages';
+import './Roll';
 import './Templates';
 import './ui';
 import './variables';

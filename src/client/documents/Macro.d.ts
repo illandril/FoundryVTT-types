@@ -8,6 +8,7 @@ declare global {
     visible: ClientDocument['visible'];
     prepareDerivedData: ClientDocument['prepareDerivedData'];
     render: ClientDocument['render'];
+    update: ClientDocument['update'];
 
     get isAuthor(): boolean;
     get canExecute(): boolean;

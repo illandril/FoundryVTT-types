@@ -55,6 +55,7 @@ declare global {
     renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void
     renderHeadsUpDisplay: (hud: HeadsUpDisplay, element: JQuery) => void
     renderHotbar: (hotbar: Hotbar, element: JQuery) => void
+    renderTokenHUD: (tokenHUD: TokenHUD, element: JQuery) => void
 
     controlToken: (token: Token, controlled: boolean) => void
     hoverToken: (token: Token, hovered: boolean) => void

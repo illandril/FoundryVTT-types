@@ -1,5 +1,3 @@
-
-
 declare global {
   namespace dnd5e {
     namespace documents {
@@ -206,7 +204,7 @@ declare global {
       }
 
       class Item5e extends Item {
-        get actor(): Actor5e | null;
+        get actor(): dnd5e.documents.Actor5e | null;
         get system(): dnd5e.documents.ItemSystemData.Any;
         get type(): 'weapon' | 'equipment' | 'consumable' | 'tool' | 'loot' | 'background' | 'class' | 'subclass' | 'spell' | 'feat' | 'backpack';
         get abilityMod(): keyof dnd5e.config.abilities | null;
@@ -217,8 +215,8 @@ declare global {
         get isVersatile(): boolean;
         get isHealing(): boolean;
         get isOriginalClass(): boolean | null;
-        get class(): Item5e | null | undefined;
-        get subclass(): Item5e | null | undefined;
+        get class(): dnd5e.documents.Item5e | null | undefined;
+        get subclass(): dnd5e.documents.Item5e | null | undefined;
         get hasSave(): boolean;
         get hasAbilityCheck(): boolean;
         get hasTarget(): boolean;
@@ -227,6 +225,8 @@ declare global {
         get isArmor(): boolean;
         get spellcasting(): dnd5e.documents.ItemSystemData.Spellcasting | undefined;
         get areEffectsSuppressed(): boolean;
+
+        use(config?: object, options?: object): Promise<ChatMessage | object | void>;
       }
     }
   }

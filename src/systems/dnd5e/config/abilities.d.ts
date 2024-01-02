@@ -4,6 +4,7 @@ type AbilityConfiguration = {
   type: 'physical' | 'mental'
   defaults?: object
 };
+
 declare global {
   namespace dnd5e {
     namespace config {

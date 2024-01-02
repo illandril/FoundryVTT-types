@@ -7,8 +7,9 @@ declare global {
     visible: ClientDocument['visible'];
     prepareDerivedData: ClientDocument['prepareDerivedData'];
     render: ClientDocument['render'];
+    update: ClientDocument['update'];
 
-    static getSpeaker(options?: { scene: Scene, actor: Actor, token: TokenDocument, alias: string }): SpeakerType;
+    static getSpeaker(options?: { scene?: Scene, actor?: Actor, token?: TokenDocument, alias?: string }): SpeakerType;
     static create(data: {
       speaker: {
         alias?: string
@@ -16,6 +17,9 @@ declare global {
         token?: TokenDocument
         scene?: Scene
       }
+      content?: string
+      whisper?: string[]
+      flavor?: string
     }): ChatMessage;
 
     get alias(): string;

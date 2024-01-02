@@ -8,6 +8,7 @@ declare global {
     visible: ClientDocument['visible'];
     prepareDerivedData: ClientDocument['prepareDerivedData'];
     render: ClientDocument['render'];
+    update: ClientDocument['update'];
 
     get sheet(): ActorSheet | null;
     get effects(): foundry.abstract.EmbeddedCollection<string, ActiveEffect>;

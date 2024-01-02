@@ -8,6 +8,7 @@ declare global {
     visible: ClientDocument['visible'];
     prepareDerivedData: ClientDocument['prepareDerivedData'];
     render: ClientDocument['render'];
+    update: ClientDocument['update'];
 
     get started(): boolean;
     get combatant(): Combatant | null | undefined;

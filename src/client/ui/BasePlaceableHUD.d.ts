@@ -7,6 +7,7 @@ declare global {
     setPosition(position?: Partial<Omit<Application.Position, 'height'>> & {
       height?: 'auto' | number | null
     }): void;
+    clear(): void;
   }
 }
 

@@ -26,4 +26,6 @@ export interface ClientDocument {
    * Render all of the Application instances which are connected to this document
    */
   render(force?: boolean, context?: Application.RenderOptions): void
+
+  update(data: unknown, context?: DocumentModificationContext): Promise<ClientDocument>
 }
