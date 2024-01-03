@@ -18,6 +18,7 @@ declare global {
     }): Application.Position | void;
 
     render(force?: boolean, options?: Application.RenderOptions): this;
+    close(options?: unknown): Promise<void>;
   }
 
   namespace Application {
