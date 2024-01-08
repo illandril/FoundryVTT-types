@@ -1,3 +1,5 @@
+import Socket from './Socket';
+
 declare global {
   /**
    * The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience.
@@ -20,7 +22,7 @@ declare global {
     // readonly sessionId: string;
     readonly settings: ClientSettings;
     readonly keybindings: ClientKeybindings;
-    // readonly socket: WebSocket | null;
+    readonly socket: Socket | null;
     // readonly time: GameTime;
     readonly canvas: Canvas;
     // readonly audio: AudioHelper;
