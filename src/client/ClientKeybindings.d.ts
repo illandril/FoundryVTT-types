@@ -12,7 +12,7 @@ declare global {
 
     type KeybindingActionConfig = {
       name: string
-      hint: string
+      hint?: string
       editable: KeybindingActionBinding[]
       onDown: () => void
       onUp: () => void
