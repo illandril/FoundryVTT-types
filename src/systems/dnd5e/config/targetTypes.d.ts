@@ -3,13 +3,14 @@ declare global {
     namespace config {
       interface targetTypes {
         ally: string
+        any: string
         cone: string
         creature: string
+        creatureOrObject: string
         cube: string
         cylinder: string
         enemy: string
         line: string
-        none: string
         object: string
         radius: string
         self: string
@@ -17,6 +18,7 @@ declare global {
         sphere: string
         square: string
         wall: string
+        willing: string
       }
       const targetTypes: targetTypes;
     }
