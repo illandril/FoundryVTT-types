@@ -206,7 +206,7 @@ declare global {
       class Item5e extends Item {
         get actor(): dnd5e.documents.Actor5e | null;
         get system(): dnd5e.documents.ItemSystemData.Any;
-        get type(): 'weapon' | 'equipment' | 'consumable' | 'tool' | 'loot' | 'background' | 'class' | 'subclass' | 'spell' | 'feat' | 'backpack';
+        get type(): 'background' | 'backpack' | 'base' | 'class' | 'consumable' | 'equipment' | 'feat' | 'loot' | 'race' | 'spell' | 'subclass' | 'tool' | 'weapon';
         get abilityMod(): keyof dnd5e.config.abilities | null;
         get identifier(): string;
         get hasAdvancement(): boolean;
