@@ -10,6 +10,7 @@ declare global {
         lair: string
         legendary: string
         minute: string
+        mythic: string
         none: string
         reaction: string
         special: string
