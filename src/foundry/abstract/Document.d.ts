@@ -9,6 +9,9 @@ declare global {
         get id(): string;
         get system(): unknown;
 
+        delete(context?: DocumentModificationContext): Promise<Document>;
+        static deleteDocuments(ids: string[], context?: DocumentModificationContext): Promise<Document[]>;
+
         getFlag(scope: string, key: string): unknown;
         setFlag(scope: string, key: string, value: unknown): void;
         unsetFlag(scope: string, key: string): void;

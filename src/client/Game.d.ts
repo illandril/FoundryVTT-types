@@ -51,7 +51,7 @@ declare global {
     // readonly playlists: Playlists;
     // readonly tables: RollTables;
     // readonly cards: CardStacks;
-    // readonly messages: Messages;
+    readonly messages: Messages;
     get isAdmin(): boolean;
     get user(): User | null;
     get combat(): Combat | undefined;
