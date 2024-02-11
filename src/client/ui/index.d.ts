@@ -2,6 +2,7 @@ import './ActorSheet';
 import './Application';
 import './ApplicationOptions';
 import './BasePlaceableHUD';
+import './Dialog';
 import './DocumentSheet';
 import './DocumentSheetOptions';
 import './DrawingHUD';
