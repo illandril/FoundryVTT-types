@@ -12,13 +12,11 @@ declare global {
     /**
      * Translate the token's grid width into a pixel width based on the canvas size
      */
-    // eslint-disable-next-line id-length
     get w(): number;
 
     /**
      * Translate the token's grid height into a pixel height based on the canvas size
      */
-    // eslint-disable-next-line id-length
     get h(): number;
 
     drawEffects(): Promise<void>;
