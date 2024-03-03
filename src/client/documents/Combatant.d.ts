@@ -14,6 +14,8 @@ declare global {
     get token(): TokenDocument | null | undefined;
     get combat(): Combat;
     get name(): string;
+    get isNPC(): boolean;
+    get isDefeated(): boolean;
   }
 }
 

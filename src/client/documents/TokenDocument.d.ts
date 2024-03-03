@@ -12,6 +12,8 @@ declare global {
     get actor(): Actor;
     get actorLink(): boolean;
     get object(): Token | null | undefined;
+    get inCombat(): boolean;
+    get combatant(): Combatant | null;
   }
 }
 
