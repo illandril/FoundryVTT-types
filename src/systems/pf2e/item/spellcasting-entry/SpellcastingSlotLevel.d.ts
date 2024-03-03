@@ -3,6 +3,7 @@ declare global {
     namespace internal {
       namespace item {
         namespace spellcastingEntry {
+          /** @deprecated since version 5.12.0 */
           interface SpellcastingSlotLevel {
             label: string
             level: number
