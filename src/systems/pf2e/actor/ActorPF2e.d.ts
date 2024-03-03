@@ -4,6 +4,7 @@ declare global {
       namespace actor {
         class ActorPF2e extends Actor {
           get spellcasting(): ActorSpellcasting;
+          get combatant(): Combatant | null;
         }
       }
     }

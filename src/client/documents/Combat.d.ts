@@ -13,6 +13,8 @@ declare global {
     get started(): boolean;
     get combatant(): Combatant | null | undefined;
     get scene(): Scene | null | undefined;
+
+    getCombatantByActor(actorOrId: string | Actor): Combatant | null | undefined;
   }
 }
 
