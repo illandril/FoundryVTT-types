@@ -1,4 +1,4 @@
-import Socket from './Socket';
+import type Socket from './Socket';
 
 declare global {
   /**

@@ -1,4 +1,4 @@
-import { ClientDocument } from './ClientDocument';
+import type { ClientDocument } from './ClientDocument';
 
 declare global {
 

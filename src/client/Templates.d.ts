@@ -1,4 +1,4 @@
-import { TemplateDelegate } from 'handlebars';
+import type { TemplateDelegate } from 'handlebars';
 
 declare global {
   const getTemplate: <T extends object>(path: string, id?: string) => Promise<TemplateDelegate<T>>;
