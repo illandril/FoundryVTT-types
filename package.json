@@ -39,7 +39,7 @@
     "pixi.js": "7.2.4"
   },
   "devDependencies": {
-    "@illandril/biome-config": "^1.0.0",
+    "@illandril/biome-config": "^1.1.1",
     "npm-run-all2": "^6.1.2",
     "typescript": "^5.3.3"
   }
