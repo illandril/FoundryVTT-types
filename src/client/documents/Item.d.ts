@@ -1,7 +1,6 @@
 import type { ClientDocument } from './ClientDocument';
 
 declare global {
-
   class Item extends foundry.documents.BaseItem implements ClientDocument {
     isOwner: ClientDocument['isOwner'];
     hasPlayerOwner: ClientDocument['hasPlayerOwner'];
@@ -13,5 +12,3 @@ declare global {
     get actor(): Actor | null;
   }
 }
-
-export {};

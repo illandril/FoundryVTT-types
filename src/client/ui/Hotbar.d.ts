@@ -1,7 +1,7 @@
 type HotbarOptions = {
-  permanent?: boolean
-  localize?: boolean
-  console?: boolean
+  permanent?: boolean;
+  localize?: boolean;
+  console?: boolean;
 };
 
 declare global {
@@ -17,4 +17,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

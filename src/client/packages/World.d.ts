@@ -1,7 +1,5 @@
-
 declare global {
-  class World extends foundry.packages.BaseWorld {
-  }
+  class World extends foundry.packages.BaseWorld {}
 }
 
-export {};
+export type {};

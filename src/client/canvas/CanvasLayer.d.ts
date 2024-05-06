@@ -1,6 +1,5 @@
 declare global {
-  class CanvasLayer extends PIXI.Container {
-  }
+  class CanvasLayer extends PIXI.Container {}
 }
 
-export {};
+export type {};

@@ -1,6 +1,5 @@
 declare global {
-  class Drawing extends PlaceableObject<DrawingDocument> {
-  }
+  class Drawing extends PlaceableObject<DrawingDocument> {}
 }
 
-export {};
+export type {};

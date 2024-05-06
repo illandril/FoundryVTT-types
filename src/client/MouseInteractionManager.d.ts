@@ -1,10 +1,9 @@
-
 interface CallbackWithArgsTypes {
-  longPress: [PIXI.Point]
+  longPress: [PIXI.Point];
 }
 
 type CallbackWithoutArgsTypes =
-  `hover${'In' | 'Out'}`
+  | `hover${'In' | 'Out'}`
   | `click${'Left' | 'Right'}${'' | '2'}`
   | `drag${'Left' | 'Right'}${'Start' | 'Move' | 'Drop' | 'Cancel'}`;
 
@@ -17,4 +16,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

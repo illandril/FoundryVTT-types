@@ -1,17 +1,17 @@
 type ContextMenuCallback = (element: HTMLElement) => void;
 
 type ContextMenuOptions = {
-  eventName?: string
-  onOpen?: ContextMenuCallback
-  onClose?: ContextMenuCallback
+  eventName?: string;
+  onOpen?: ContextMenuCallback;
+  onClose?: ContextMenuCallback;
 };
 
 declare global {
   type ContextMenuEntry = {
-    name: string
-    icon: string
-    callback: (element: JQuery) => void
-    condition?: (element: JQuery) => boolean
+    name: string;
+    icon: string;
+    callback: (element: JQuery) => void;
+    condition?: (element: JQuery) => boolean;
   };
 
   class ContextMenu {
@@ -27,8 +27,8 @@ declare global {
   }
 
   interface Window {
-    ContextMenu: typeof ContextMenu
+    ContextMenu: typeof ContextMenu;
   }
 }
 
-export {};
+export type {};

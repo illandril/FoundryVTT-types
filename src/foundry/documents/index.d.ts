@@ -10,5 +10,3 @@ import './BaseScene';
 import './BaseTile';
 import './BaseToken';
 import './BaseUser';
-
-export {};

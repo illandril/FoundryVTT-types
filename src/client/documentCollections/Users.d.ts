@@ -1,6 +1,5 @@
 declare global {
-  class Users extends WorldCollection<string, User> {
-  }
+  class Users extends WorldCollection<string, User> {}
 }
 
-export {};
+export type {};

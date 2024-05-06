@@ -1,6 +1,5 @@
 declare global {
-  class CombatEncounters extends WorldCollection<string, Combat> {
-  }
+  class CombatEncounters extends WorldCollection<string, Combat> {}
 }
 
-export {};
+export type {};

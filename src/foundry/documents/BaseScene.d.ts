@@ -1,17 +1,17 @@
 type GridConfiguration = {
-  size: number
-  distance: number
-  units: string
+  size: number;
+  distance: number;
+  units: string;
 };
 
 type TextureData = {
-  src: string | null
-  scaleX: number
-  scaleY: number
-  offsetX: number
-  offsetY: number
-  rotation: number
-  tint: string | null
+  src: string | null;
+  scaleX: number;
+  scaleY: number;
+  offsetX: number;
+  offsetY: number;
+  rotation: number;
+  tint: string | null;
 };
 
 declare global {
@@ -26,4 +26,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

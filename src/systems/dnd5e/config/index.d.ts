@@ -24,5 +24,3 @@ import './spellScalingModes';
 import './spellSchools';
 import './targetTypes';
 import './timePeriods';
-
-export {};

@@ -18,8 +18,8 @@ declare global {
   }
 
   interface Window {
-    FormApplication: typeof FormApplication
+    FormApplication: typeof FormApplication;
   }
 }
 
-export {};
+export type {};

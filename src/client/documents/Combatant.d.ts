@@ -1,7 +1,6 @@
 import type { ClientDocument } from './ClientDocument';
 
 declare global {
-
   class Combatant extends foundry.documents.BaseCombatant implements ClientDocument {
     isOwner: ClientDocument['isOwner'];
     hasPlayerOwner: ClientDocument['hasPlayerOwner'];
@@ -18,5 +17,3 @@ declare global {
     get isDefeated(): boolean;
   }
 }
-
-export {};

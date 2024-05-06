@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "linter": {
+    "rules": {
+      "correctness": {
+        // FoundryVTT adds lots of global variables, much easier to just ignore
+        // them than to list them all individually. Plus, Typescript will typically
+        // catch ones that are actually invalid.
+        "noUndeclaredVariables": "off"
+      }
+    }
+  }
+}

@@ -13,5 +13,3 @@ import './Hotbar';
 import './Notifications';
 import './TileHUD';
 import './TokenHUD';
-
-export {};

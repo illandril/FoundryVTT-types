@@ -10,5 +10,3 @@ declare global {
     update: ClientDocument['update'];
   }
 }
-
-export {};

@@ -1,7 +1,6 @@
 import type { ClientDocument } from './ClientDocument';
 
 declare global {
-
   class Actor extends foundry.documents.BaseActor implements ClientDocument {
     isOwner: ClientDocument['isOwner'];
     hasPlayerOwner: ClientDocument['hasPlayerOwner'];
@@ -16,5 +15,3 @@ declare global {
     get items(): foundry.abstract.EmbeddedCollection<string, Item>;
   }
 }
-
-export {};

@@ -1,9 +1,9 @@
 declare global {
   type SpeakerType = {
-    scene?: string
-    actor?: string
-    token?: string
-    alias?: string
+    scene?: string;
+    actor?: string;
+    token?: string;
+    alias?: string;
   };
   namespace foundry {
     namespace documents {
@@ -15,4 +15,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

@@ -1,5 +1,5 @@
 type BaseGridOptions = {
-  dimensions: SceneDimensions
+  dimensions: SceneDimensions;
 };
 
 declare global {
@@ -12,4 +12,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

@@ -1,7 +1,7 @@
 declare global {
   type DocumentSheetOptions = FormApplicationOptions & {
-    viewPermission: number
+    viewPermission: number;
   };
 }
 
-export {};
+export type {};

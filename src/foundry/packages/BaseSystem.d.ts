@@ -1,10 +1,9 @@
 declare global {
   namespace foundry {
     namespace packages {
-      class BaseSystem extends foundry.packages.BasePackage {
-      }
+      class BaseSystem extends foundry.packages.BasePackage {}
     }
   }
 }
 
-export {};
+export type {};

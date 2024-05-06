@@ -1,6 +1,5 @@
 declare global {
-  class Messages extends WorldCollection<string, ChatMessage> {
-  }
+  class Messages extends WorldCollection<string, ChatMessage> {}
 }
 
-export {};
+export type {};

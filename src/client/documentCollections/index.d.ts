@@ -6,5 +6,3 @@ import './Messages';
 import './Scenes';
 import './Users';
 import './WorldCollection';
-
-export {};

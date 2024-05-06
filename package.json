@@ -2,11 +2,19 @@
   "name": "@illandril/foundryvtt-types",
   "version": "6.18.0",
   "description": "Type definitions for the Foundry VTT client, used by Illandril's modules",
-  "types": "./src/index.d.ts",
   "type": "module",
+  "types": "./src/index.d.ts",
+  "exports": {
+    "./biome": "./biome.foundryvtt.jsonc"
+  },
+  "files": [
+    "biome.foundryvtt.jsonc",
+    "src",
+    "LICENSE"
+  ],
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "biome check .",
+    "lint:fix": "npm run lint -- --apply",
     "type-check": "tsc --noEmit",
     "preversion": "npm run validate",
     "validate": "run-s type-check lint"
@@ -25,13 +33,13 @@
   "author": "Joe Spandrusyszyn",
   "license": "MIT",
   "dependencies": {
-    "@types/jquery": "^3.5.29",
     "@types/css-font-loading-module": "^0.0.13",
+    "@types/jquery": "^3.5.29",
     "handlebars": "4.7.7",
     "pixi.js": "7.2.4"
   },
   "devDependencies": {
-    "@illandril/eslint-config-foundryvtt": "^1.10.0",
+    "@illandril/biome-config": "^1.0.0",
     "npm-run-all2": "^6.1.2",
     "typescript": "^5.3.3"
   }

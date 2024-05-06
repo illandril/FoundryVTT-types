@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["@illandril/biome-config", "./biome.foundryvtt.jsonc"],
+  "linter": {
+    "rules": {
+      "style": {
+        // Anything here is following the naming convention defined by
+        // Foundry, a system, or one of their dependencies... so it
+        // doesn't necessarily follow my preferred naming convention
+        "useNamingConvention": "off",
+
+        // Anything here is following the naming convention defined by
+        // Foundry, a system, or one of their dependencies... so it
+        // doesn't necessarily follow my preferred naming convention
+        "useFilenamingConvention": "off"
+      }
+    }
+  }
+}

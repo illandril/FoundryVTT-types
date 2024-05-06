@@ -1,6 +1,5 @@
 declare global {
-  class InteractionLayer extends CanvasLayer {
-  }
+  class InteractionLayer extends CanvasLayer {}
 }
 
-export {};
+export type {};

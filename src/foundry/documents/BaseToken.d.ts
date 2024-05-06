@@ -2,26 +2,26 @@ declare global {
   namespace foundry {
     namespace documents {
       type BaseTokenFields = foundry.abstract.DocumentFields & {
-        name: string
+        name: string;
 
-        texture: foundry.data.TextureData
+        texture: foundry.data.TextureData;
 
-        actorId: string
-        actorLink: boolean
+        actorId: string;
+        actorLink: boolean;
 
-        width: number
-        height: number
-        x: number
-        y: number
-        elevation: number
-        rotation: number
+        width: number;
+        height: number;
+        x: number;
+        y: number;
+        elevation: number;
+        rotation: number;
 
-        effects: string[]
-        overlayEffect: string
+        effects: string[];
+        overlayEffect: string;
 
-        hidden: boolean
+        hidden: boolean;
 
-        disposition: number
+        disposition: number;
       };
 
       class BaseToken extends foundry.abstract.Document {
@@ -50,4 +50,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

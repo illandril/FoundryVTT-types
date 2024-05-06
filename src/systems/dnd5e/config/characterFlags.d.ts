@@ -11,33 +11,33 @@
  */
 
 type CharacterFlagConfig = {
-  name: string
-  hint: string
-  section: string
+  name: string;
+  hint: string;
+  section: string;
 };
 
 declare global {
   namespace dnd5e {
     namespace config {
       interface characterFlags {
-        [index: string]: CharacterFlagConfig
-        diamondSoul: CharacterFlagConfig
-        elvenAccuracy: CharacterFlagConfig
-        halflingLucky: CharacterFlagConfig
-        initiativeAdv: CharacterFlagConfig
-        initiativeAlert: CharacterFlagConfig
-        jackOfAllTrades: CharacterFlagConfig
-        observantFeat: CharacterFlagConfig
-        powerfulBuild: CharacterFlagConfig
-        reliableTalent: CharacterFlagConfig
-        remarkableAthlete: CharacterFlagConfig
-        weaponCriticalThreshold: CharacterFlagConfig
-        spellCriticalThreshold: CharacterFlagConfig
-        meleeCriticalDamageDice: CharacterFlagConfig
+        [index: string]: CharacterFlagConfig;
+        diamondSoul: CharacterFlagConfig;
+        elvenAccuracy: CharacterFlagConfig;
+        halflingLucky: CharacterFlagConfig;
+        initiativeAdv: CharacterFlagConfig;
+        initiativeAlert: CharacterFlagConfig;
+        jackOfAllTrades: CharacterFlagConfig;
+        observantFeat: CharacterFlagConfig;
+        powerfulBuild: CharacterFlagConfig;
+        reliableTalent: CharacterFlagConfig;
+        remarkableAthlete: CharacterFlagConfig;
+        weaponCriticalThreshold: CharacterFlagConfig;
+        spellCriticalThreshold: CharacterFlagConfig;
+        meleeCriticalDamageDice: CharacterFlagConfig;
       }
       const characterFlags: characterFlags;
     }
   }
 }
 
-export {};
+export type {};

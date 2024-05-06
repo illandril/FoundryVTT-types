@@ -5,5 +5,3 @@ import './SpellcastingSlotGroup';
 import './SpellcastingSlotLevel';
 import './SpellCollectionData';
 import './SpellSlotGroupId';
-
-export {};

@@ -5,9 +5,7 @@ declare global {
   const renderTemplate: <T extends object>(path: string, data: T) => Promise<string>;
 
   interface Window {
-    getTemplate: typeof getTemplate
-    renderTemplate: typeof renderTemplate
+    getTemplate: typeof getTemplate;
+    renderTemplate: typeof renderTemplate;
   }
 }
-
-export {};

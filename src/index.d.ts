@@ -5,5 +5,3 @@ import './primitives';
 import './systems';
 import './tinyMCE';
 import './types';
-
-export {};

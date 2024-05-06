@@ -10,10 +10,10 @@ declare global {
     get dimensions(): SceneDimensions | undefined;
     get scene(): Scene | null;
 
-    animatePan(args: Partial<CanvasViewPosition> & { duration?: number, speed?: number }): Promise<unknown>;
-    canvasCoordinatesFromClient: (origin: { x: number, y: number }) => { x: number, y: number };
-    clientCoordinatesFromCanvas: (origin: { x: number, y: number }) => { x: number, y: number };
+    animatePan(args: Partial<CanvasViewPosition> & { duration?: number; speed?: number }): Promise<unknown>;
+    canvasCoordinatesFromClient: (origin: { x: number; y: number }) => { x: number; y: number };
+    clientCoordinatesFromCanvas: (origin: { x: number; y: number }) => { x: number; y: number };
   }
 }
 
-export {};
+export type {};

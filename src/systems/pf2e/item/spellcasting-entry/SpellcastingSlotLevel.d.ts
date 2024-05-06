@@ -5,17 +5,17 @@ declare global {
         namespace spellcastingEntry {
           /** @deprecated since version 5.12.0 */
           interface SpellcastingSlotLevel {
-            label: string
-            level: number
-            isCantrip: boolean
+            label: string;
+            level: number;
+            isCantrip: boolean;
             uses?: {
-              value?: number
-              max: number
-            }
+              value?: number;
+              max: number;
+            };
           }
         }
       }
     }
   }
 }
-export {};
+export type {};

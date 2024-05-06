@@ -14,5 +14,3 @@ import './Roll';
 import './Templates';
 import './ui';
 import './variables';
-
-export {};

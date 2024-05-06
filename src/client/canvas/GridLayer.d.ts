@@ -1,10 +1,10 @@
 type Position = {
-  x: number
-  y: number
+  x: number;
+  y: number;
 };
 
 type MeasureDistanceOptions = {
-  gridSpaces?: boolean
+  gridSpaces?: boolean;
 };
 
 declare global {
@@ -18,4 +18,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

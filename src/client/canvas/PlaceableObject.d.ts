@@ -1,7 +1,5 @@
 declare global {
-  class PlaceableObject<
-    DocumentType extends foundry.abstract.Document,
-  > extends PIXI.Container {
+  class PlaceableObject<DocumentType extends foundry.abstract.Document> extends PIXI.Container {
     get document(): DocumentType;
     get center(): PIXI.Point;
     get mouseInteractionManager(): MouseInteractionManager;
@@ -13,4 +11,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

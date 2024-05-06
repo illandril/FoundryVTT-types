@@ -10,5 +10,3 @@ import './Scene';
 import './TileDocument';
 import './TokenDocument';
 import './User';
-
-export {};

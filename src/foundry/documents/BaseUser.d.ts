@@ -2,9 +2,9 @@ declare global {
   namespace foundry {
     namespace documents {
       type BaseUserFields = {
-        isGM: boolean
-        name: string
-        avatar: string
+        isGM: boolean;
+        name: string;
+        avatar: string;
       };
 
       class BaseUser extends foundry.abstract.Document {
@@ -19,4 +19,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

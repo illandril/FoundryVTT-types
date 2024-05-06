@@ -1,29 +1,29 @@
 type AstNode = {
-  parent?: AstNode
-  firstChild?: AstNode
-  lastChild?: AstNode
-  next?: AstNode
-  prev?: AstNode
+  parent?: AstNode;
+  firstChild?: AstNode;
+  lastChild?: AstNode;
+  next?: AstNode;
+  prev?: AstNode;
 };
 
 declare global {
   const tinyMCE: {
     html: {
-      DomParser: (options: { validate: true }) => { parse(html: string): AstNode }
-      Serializer: () => { serialize(node: AstNode): string }
-    }
+      DomParser: (options: { validate: true }) => { parse(html: string): AstNode };
+      Serializer: () => { serialize(node: AstNode): string };
+    };
     dom: {
       DOMUtils: {
         DOM: {
-          createFragment: (html: string) => DocumentFragment
-        }
-      }
-    }
+          createFragment: (html: string) => DocumentFragment;
+        };
+      };
+    };
   };
 
   interface Window {
-    tinyMCE: typeof tinyMCE
+    tinyMCE: typeof tinyMCE;
   }
 }
 
-export {};
+export type {};

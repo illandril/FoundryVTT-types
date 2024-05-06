@@ -12,5 +12,3 @@ declare global {
     get viewedScene(): string | null;
   }
 }
-
-export {};

@@ -2,9 +2,9 @@ declare global {
   namespace foundry {
     namespace documents {
       type BaseCombatFields = foundry.abstract.DocumentFields & {
-        active: boolean
-        round: number
-        turn: number
+        active: boolean;
+        round: number;
+        turn: number;
       };
 
       class BaseCombat extends foundry.abstract.Document {
@@ -16,4 +16,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

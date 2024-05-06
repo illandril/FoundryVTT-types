@@ -2,10 +2,10 @@ declare global {
   namespace foundry {
     namespace documents {
       type BaseCombatantFields = {
-        defeated: boolean
-        hidden: boolean
-        initiative: number | null | undefined
-        name: string
+        defeated: boolean;
+        hidden: boolean;
+        initiative: number | null | undefined;
+        name: string;
       };
 
       class BaseCombatant extends foundry.abstract.Document {
@@ -18,4 +18,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

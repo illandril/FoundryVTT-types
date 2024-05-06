@@ -2,8 +2,8 @@ declare global {
   namespace foundry {
     namespace documents {
       type BaseActorFields = {
-        name: string
-        type: typeof foundry.documents.BaseActor.TYPES[number]
+        name: string;
+        type: (typeof foundry.documents.BaseActor.TYPES)[number];
       };
 
       class BaseActor extends foundry.abstract.Document {
@@ -17,4 +17,4 @@ declare global {
   }
 }
 
-export {};
+export type {};

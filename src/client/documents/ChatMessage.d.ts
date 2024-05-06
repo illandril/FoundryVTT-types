@@ -9,17 +9,17 @@ declare global {
     render: ClientDocument['render'];
     update: ClientDocument['update'];
 
-    static getSpeaker(options?: { scene?: Scene, actor?: Actor, token?: TokenDocument, alias?: string }): SpeakerType;
+    static getSpeaker(options?: { scene?: Scene; actor?: Actor; token?: TokenDocument; alias?: string }): SpeakerType;
     static create(data: {
       speaker: {
-        alias?: string
-        actor?: Actor
-        token?: TokenDocument
-        scene?: Scene
-      }
-      content?: string
-      whisper?: string[]
-      flavor?: string
+        alias?: string;
+        actor?: Actor;
+        token?: TokenDocument;
+        scene?: Scene;
+      };
+      content?: string;
+      whisper?: string[];
+      flavor?: string;
     }): ChatMessage;
 
     get alias(): string;
@@ -29,8 +29,6 @@ declare global {
   }
 
   interface Window {
-    ChatMessage: typeof ChatMessage
+    ChatMessage: typeof ChatMessage;
   }
 }
-
-export {};

@@ -16,5 +16,3 @@ declare global {
     get combatant(): Combatant | null;
   }
 }
-
-export {};

@@ -39,7 +39,6 @@ declare global {
     readonly modules: foundry.utils.Collection<string, Module>;
     readonly version: string;
 
-
     readonly users: Users;
     // readonly folders: Folders;
     get actors(): Actors;
@@ -60,5 +59,3 @@ declare global {
     // get activeTool(): string;
   }
 }
-
-export {};

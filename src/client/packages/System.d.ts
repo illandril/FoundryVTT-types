@@ -1,7 +1,5 @@
-
 declare global {
-  class System extends foundry.packages.BaseSystem {
-  }
+  class System extends foundry.packages.BaseSystem {}
 }
 
-export {};
+export type {};

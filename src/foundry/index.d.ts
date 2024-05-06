@@ -5,5 +5,3 @@ import './data';
 import './documents';
 import './packages';
 import './utils';
-
-export {};

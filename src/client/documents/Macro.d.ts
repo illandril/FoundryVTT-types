@@ -1,7 +1,6 @@
 import type { ClientDocument } from './ClientDocument';
 
 declare global {
-
   class Macro extends foundry.documents.BaseMacro implements ClientDocument {
     isOwner: ClientDocument['isOwner'];
     hasPlayerOwner: ClientDocument['hasPlayerOwner'];
@@ -14,5 +13,3 @@ declare global {
     get canExecute(): boolean;
   }
 }
-
-export {};

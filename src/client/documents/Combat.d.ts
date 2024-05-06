@@ -1,7 +1,6 @@
 import type { ClientDocument } from './ClientDocument';
 
 declare global {
-
   class Combat extends foundry.documents.BaseCombat implements ClientDocument {
     isOwner: ClientDocument['isOwner'];
     hasPlayerOwner: ClientDocument['hasPlayerOwner'];
@@ -17,5 +16,3 @@ declare global {
     getCombatantByActor(actorOrId: string | Actor): Combatant | null | undefined;
   }
 }
-
-export {};
