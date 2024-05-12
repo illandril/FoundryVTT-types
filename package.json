@@ -17,7 +17,8 @@
     "lint:fix": "npm run lint -- --apply",
     "type-check": "tsc --noEmit",
     "preversion": "npm run validate",
-    "validate": "run-s type-check lint"
+    "validate": "run-s type-check lint",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -36,10 +37,11 @@
     "@types/css-font-loading-module": "^0.0.13",
     "@types/jquery": "^3.5.29",
     "handlebars": "4.7.7",
-    "pixi.js": "7.2.4"
+    "pixi.js": "7.4.2"
   },
   "devDependencies": {
     "@illandril/biome-config": "^1.1.1",
+    "husky": "^9.0.11",
     "npm-run-all2": "^6.1.2",
     "typescript": "^5.3.3"
   }
