@@ -3,9 +3,10 @@ declare global {
     get ready(): boolean;
 
     get stage(): PIXI.Container | undefined;
-    get grid(): GridLayer | null;
+    get grid(): foundry.grid.BaseGrid | null;
     get hud(): HeadsUpDisplay | undefined;
     get tokens(): TokenLayer | undefined;
+    get interface(): InterfaceCanvasGroup | undefined;
 
     get dimensions(): SceneDimensions | undefined;
     get scene(): Scene | null;

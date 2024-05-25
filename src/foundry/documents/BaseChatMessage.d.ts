@@ -8,7 +8,7 @@ declare global {
   namespace foundry {
     namespace documents {
       class BaseChatMessage extends foundry.abstract.Document {
-        get user(): BaseUser;
+        get author(): BaseUser;
         get speaker(): SpeakerType;
       }
     }

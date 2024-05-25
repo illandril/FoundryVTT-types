@@ -2,12 +2,14 @@ declare global {
   class Token extends PlaceableObject<TokenDocument> {
     get actor(): Actor;
 
-    get owner(): boolean;
     get observer(): boolean;
 
     get isVisible(): boolean;
 
-    get effects(): PIXI.Container;
+    get effects(): PIXI.Container & {
+      bg: PIXI.Graphics;
+      overlay: PIXI.Sprite | null;
+    };
 
     /**
      * Translate the token's grid width into a pixel width based on the canvas size

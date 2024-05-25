@@ -24,6 +24,9 @@ declare global {
     ratio: number;
     /** The length of the longest line that can be drawn on the canvas. */
     maxR: number;
+
+    columns: number;
+    rows: number;
   };
 }
 

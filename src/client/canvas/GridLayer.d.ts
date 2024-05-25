@@ -9,10 +9,8 @@ type MeasureDistanceOptions = {
 
 declare global {
   class GridLayer extends CanvasLayer {
-    get size(): number;
-    get isHex(): boolean;
-    get grid(): BaseGrid;
-    get type(): number;
+    get isHexagonal(): boolean;
+    get grid(): foundry.grid.BaseGrid;
 
     measureDistance(origin: Position, target: Position, option?: MeasureDistanceOptions): number;
   }
