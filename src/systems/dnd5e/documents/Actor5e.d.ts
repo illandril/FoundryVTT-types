@@ -154,6 +154,12 @@ declare global {
           };
         };
 
+        type Favorite = {
+          id: string;
+          sort: number;
+          type: string;
+        };
+
         type Character = Common &
           Creature & {
             attributes?: {
@@ -203,6 +209,7 @@ declare global {
                 custom?: string;
               };
             };
+            favorites?: Favorite[];
           };
 
         type NPC = Common &
