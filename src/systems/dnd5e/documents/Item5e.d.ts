@@ -7,6 +7,11 @@ declare global {
           ability?: keyof dnd5e.config.abilities | null;
         };
 
+        type SpellcastingDescription = Spellcasting & {
+          levels?: number;
+          type?: keyof typeof dnd5e.config.spellcastingTypes | null;
+        };
+
         type ItemDescription = {
           description?: {
             value?: string;
@@ -264,7 +269,7 @@ declare global {
         get hasAreaTarget(): boolean;
         get hasLimitedUses(): boolean;
         get isArmor(): boolean;
-        get spellcasting(): dnd5e.documents.ItemSystemData.Spellcasting | undefined;
+        get spellcasting(): dnd5e.documents.ItemSystemData.SpellcastingDescription | null | undefined;
         get areEffectsSuppressed(): boolean;
 
         use(config?: object, options?: object): Promise<ChatMessage | object | undefined>;
