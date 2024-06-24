@@ -1,6 +1,6 @@
 declare global {
   namespace dnd5e {
-    namespace application {
+    namespace applications {
       namespace actor {
         class ActorSheet5eNPC extends ActorSheet5e {}
       }

@@ -6,7 +6,7 @@ type SheetTabDescriptor5e = {
 };
 declare global {
   namespace dnd5e {
-    namespace application {
+    namespace applications {
       namespace actor {
         class ActorSheet5eCharacter2 extends ActorSheet5eCharacter {
           static MODES: {
