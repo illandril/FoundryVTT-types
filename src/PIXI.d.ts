@@ -3,7 +3,6 @@ import {
   BatchRenderer,
   BatchShaderGenerator,
   Bounds,
-  Circle,
   Container,
   DisplayObject,
   FederatedEvent,
@@ -14,10 +13,11 @@ import {
   IPointData,
   Matrix,
   Mesh,
+  Circle as PixiCircle,
+  Polygon as PixiPolygon,
+  Rectangle as PixiRectangle,
   Point,
-  Polygon,
   Program,
-  Rectangle,
   RenderTexture,
   Renderer,
   Sprite,
@@ -29,12 +29,23 @@ import {
 
 declare global {
   namespace PIXI {
+    export class Polygon extends PixiPolygon {
+      getBounds(): Rectangle;
+    }
+
+    export class Rectangle extends PixiRectangle {
+      toPolygon(): Polygon;
+    }
+
+    export class Circle extends PixiCircle {
+      toPolygon(options?: { density?: number; includeEndpoints?: boolean }): Polygon;
+    }
+
     export {
       Application,
       BatchRenderer,
       BatchShaderGenerator,
       Bounds,
-      Circle,
       Container,
       DisplayObject,
       FederatedEvent,
@@ -46,9 +57,7 @@ declare global {
       Matrix,
       Mesh,
       Point,
-      Polygon,
       Program,
-      Rectangle,
       Renderer,
       RenderTexture,
       Sprite,
