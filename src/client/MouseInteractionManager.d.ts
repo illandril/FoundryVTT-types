@@ -1,5 +1,5 @@
 interface CallbackWithArgsTypes {
-  longPress: [typeof PIXI.Point];
+  longPress: [PIXI.Point];
 }
 
 type CallbackWithoutArgsTypes =

@@ -1,5 +1,61 @@
-import type * as pixi from 'pixi.js';
+import {
+  Application,
+  BatchRenderer,
+  BatchShaderGenerator,
+  Bounds,
+  Circle,
+  Container,
+  DisplayObject,
+  FederatedEvent,
+  Filter,
+  Geometry,
+  Graphics,
+  GraphicsGeometry,
+  IPointData,
+  Matrix,
+  Mesh,
+  Point,
+  Polygon,
+  Program,
+  Rectangle,
+  RenderTexture,
+  Renderer,
+  Sprite,
+  Text,
+  TextStyle,
+  Texture,
+  Transform,
+} from 'pixi.js';
 
 declare global {
-  const PIXI: typeof pixi;
+  namespace PIXI {
+    export {
+      Application,
+      BatchRenderer,
+      BatchShaderGenerator,
+      Bounds,
+      Circle,
+      Container,
+      DisplayObject,
+      FederatedEvent,
+      Filter,
+      Geometry,
+      Graphics,
+      GraphicsGeometry,
+      IPointData,
+      Matrix,
+      Mesh,
+      Point,
+      Polygon,
+      Program,
+      Rectangle,
+      Renderer,
+      RenderTexture,
+      Sprite,
+      Text,
+      TextStyle,
+      Texture,
+      Transform,
+    };
+  }
 }

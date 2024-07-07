@@ -1,6 +1,6 @@
 declare global {
   type Point =
-    | typeof PIXI.Point
+    | PIXI.Point
     | {
         x: number;
         y: number;

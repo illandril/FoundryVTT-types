@@ -7,7 +7,7 @@ declare global {
     /** The grid size. */
     size: number;
     /** The canvas rectangle. */
-    rect: typeof PIXI.Rectangle;
+    rect: PIXI.Rectangle;
     /** The X coordinate of the scene rectangle within the larger canvas. */
     sceneX: number;
     /** The Y coordinate of the scene rectangle within the larger canvas. */
@@ -17,7 +17,7 @@ declare global {
     /** The height of the scene. */
     sceneHeight: number;
     /** The scene rectangle. */
-    sceneRect: typeof PIXI.Rectangle;
+    sceneRect: PIXI.Rectangle;
     /** The number of distance units in a single grid space. */
     distance: number;
     /** The aspect ratio of the scene rectangle. */

@@ -6,9 +6,9 @@ declare global {
 
     get isVisible(): boolean;
 
-    get effects(): typeof PIXI.Container & {
-      bg: typeof PIXI.Graphics;
-      overlay: typeof PIXI.Sprite | null;
+    get effects(): PIXI.Container & {
+      bg: PIXI.Graphics;
+      overlay: PIXI.Sprite | null;
     };
 
     /**
@@ -21,7 +21,7 @@ declare global {
      */
     get h(): number;
 
-    get shape(): typeof PIXI.Rectangle | typeof PIXI.Polygon | typeof PIXI.Circle;
+    get shape(): PIXI.Rectangle | PIXI.Polygon | PIXI.Circle;
 
     drawEffects(): Promise<void>;
     _refreshEffects(): void;

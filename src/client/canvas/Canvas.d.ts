@@ -2,7 +2,7 @@ declare global {
   class Canvas {
     get ready(): boolean;
 
-    get stage(): typeof PIXI.Container | undefined;
+    get stage(): PIXI.Container | undefined;
     get grid(): foundry.grid.BaseGrid | null;
     get hud(): HeadsUpDisplay | undefined;
     get tokens(): TokenLayer | undefined;
