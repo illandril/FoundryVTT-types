@@ -1,9 +1,9 @@
 declare global {
   class PlaceableObject<DocumentType extends foundry.abstract.Document> extends PIXI.Container {
     get document(): DocumentType;
-    get center(): PIXI.Point;
+    get center(): typeof PIXI.Point;
     get mouseInteractionManager(): MouseInteractionManager;
-    get bounds(): PIXI.Rectangle;
+    get bounds(): typeof PIXI.Rectangle;
     get scene(): Scene;
 
     control(options?: { releaseOthers?: boolean }): boolean;

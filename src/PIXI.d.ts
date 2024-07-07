@@ -1,7 +1,5 @@
-import { Container, DisplayObject, Graphics, Point, Rectangle, Sprite } from 'pixi.js';
+import type * as pixi from 'pixi.js';
 
 declare global {
-  namespace PIXI {
-    export { Container, DisplayObject, Graphics, Point, Rectangle, Sprite };
-  }
+  const PIXI: typeof pixi;
 }

@@ -6,9 +6,9 @@ declare global {
 
     get isVisible(): boolean;
 
-    get effects(): PIXI.Container & {
-      bg: PIXI.Graphics;
-      overlay: PIXI.Sprite | null;
+    get effects(): typeof PIXI.Container & {
+      bg: typeof PIXI.Graphics;
+      overlay: typeof PIXI.Sprite | null;
     };
 
     /**
@@ -20,6 +20,8 @@ declare global {
      * Translate the token's grid height into a pixel height based on the canvas size
      */
     get h(): number;
+
+    get shape(): typeof PIXI.Rectangle | typeof PIXI.Polygon | typeof PIXI.Circle;
 
     drawEffects(): Promise<void>;
     _refreshEffects(): void;

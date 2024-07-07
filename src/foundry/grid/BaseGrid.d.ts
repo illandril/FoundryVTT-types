@@ -51,6 +51,8 @@ declare global {
           },
         ): GridMeasurePathResult;
 
+        getCenterPoint(coords: GridCoordinates): Point;
+
         /** @deprecated https://github.com/foundryvtt/foundryvtt/issues/10077 */
         getGridPositionFromPixels(x: number, y: number): [number, number];
       }
