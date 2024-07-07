@@ -34,11 +34,15 @@ declare global {
     }
 
     export class Rectangle extends PixiRectangle {
+      get center(): { x: number; y: number };
       toPolygon(): Polygon;
+      getBounds(): Rectangle;
     }
 
     export class Circle extends PixiCircle {
+      get center(): { x: number; y: number };
       toPolygon(options?: { density?: number; includeEndpoints?: boolean }): Polygon;
+      getBounds(): Rectangle;
     }
 
     export {
