@@ -1,20 +1,9 @@
-type HotbarOptions = {
-  permanent?: boolean;
-  localize?: boolean;
-  console?: boolean;
-};
-
 declare global {
-  class Hotbar extends Application {
-    get page(): number;
-    get macros(): Macro[];
-    get locked(): boolean;
-
-    collapse(): Promise<boolean>;
-    expand(): Promise<boolean>;
-    changePage(page: number): void;
-    cyclePage(direction: 1 | -1): void;
-  }
+  /**
+   * Moved to `foundry.applications.ui` in v13
+   * @deprecated
+   */
+  const Hotbar: typeof foundry.applications.ui.Hotbar;
 }
 
 export type {};

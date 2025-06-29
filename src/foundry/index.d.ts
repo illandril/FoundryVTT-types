@@ -1,8 +1,10 @@
 import './abstract';
+import './applications';
 import './config';
 import './CONST';
 import './data';
 import './documents';
+import './Game';
 import './grid';
 import './packages';
 import './utils';

@@ -62,7 +62,7 @@ declare global {
     renderActorSheet: (actorSheet: ActorSheet, element: JQuery) => void;
     renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void;
     renderHeadsUpDisplay: (hud: HeadsUpDisplay, element: JQuery) => void;
-    renderHotbar: (hotbar: Hotbar, element: JQuery) => void;
+    renderHotbar: (hotbar: foundry.applications.ui.Hotbar, element: JQuery) => void;
     renderTokenHUD: (tokenHUD: TokenHUD, element: JQuery) => void;
 
     controlToken: (token: Token, controlled: boolean) => void;

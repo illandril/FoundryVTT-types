@@ -23,6 +23,14 @@ export interface ClientDocument {
   prepareDerivedData(): void;
 
   /**
+   * Prepare data for the Document. This method is called automatically by the DataModel#_initialize workflow.
+   * This method provides an opportunity for Document classes to define special data preparation logic.
+   * The work done by this method should be idempotent.
+   * There are situations in which prepareData may be called more than once.
+   */
+  prepareData(): void;
+
+  /**
    * Render all of the Application instances which are connected to this document
    */
   render(force?: boolean, context?: Application.RenderOptions): void;

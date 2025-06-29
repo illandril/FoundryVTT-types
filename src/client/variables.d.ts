@@ -1,10 +1,10 @@
 declare global {
   interface UI {
     notifications: Notifications;
-    hotbar: Hotbar;
+    hotbar: foundry.applications.ui.Hotbar;
     windows?: Record<number, Application | undefined>;
   }
-  const game: Game;
+  const game: foundry.Game;
   const ui: UI;
 
   interface Window {
