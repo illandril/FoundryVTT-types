@@ -4,7 +4,7 @@ declare global {
 
     get stage(): PIXI.Container | undefined;
     get grid(): foundry.grid.BaseGrid | null;
-    get hud(): HeadsUpDisplay | undefined;
+    get hud(): foundry.applications.hud.HeadsUpDisplayContainer | undefined;
     get tokens(): TokenLayer | undefined;
     get interface(): InterfaceCanvasGroup | undefined;
 

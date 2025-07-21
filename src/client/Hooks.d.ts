@@ -17,8 +17,16 @@ type HooksType = {
   call: <K extends HookKey>(hook: K, ...args: Parameters<HookCallback<K>>) => boolean;
 };
 
+type renderApplicationV1<T extends Application> = (application: T, element: JQuery) => void;
+type renderApplicationV2<T extends foundry.applications.api.ApplicationV2> = (
+  application: T,
+  element: HTMLElement,
+) => void;
+
 type GenericHooks = {
-  [index: `render${string}`]: (application: Application, element: JQuery) => void;
+  [index: `render${string}`]:
+    | renderApplicationV1<Application>
+    | renderApplicationV2<foundry.applications.api.ApplicationV2>;
   [index: `preUpdate${string}`]: (
     document: foundry.abstract.Document,
     changes: unknown,
@@ -59,11 +67,11 @@ declare global {
     canvasTearDown: (canvas: Canvas) => void;
     canvasPan: (canvas: Canvas, constrained: CanvasViewPosition) => void;
 
-    renderActorSheet: (actorSheet: ActorSheet, element: JQuery) => void;
-    renderChatMessage: (chatMessage: ChatMessage, element: JQuery) => void;
-    renderHeadsUpDisplay: (hud: HeadsUpDisplay, element: JQuery) => void;
-    renderHotbar: (hotbar: foundry.applications.ui.Hotbar, element: JQuery) => void;
-    renderTokenHUD: (tokenHUD: TokenHUD, element: JQuery) => void;
+    renderActorSheet: renderApplicationV1<ActorSheet>;
+    renderChatMessageHTML: (chatMessage: ChatMessage, element: HTMLElement) => void;
+    renderHeadsUpDisplayContainer: renderApplicationV2<foundry.applications.hud.HeadsUpDisplayContainer>;
+    renderHotbar: renderApplicationV2<foundry.applications.ui.Hotbar>;
+    renderTokenHUD: renderApplicationV2<foundry.applications.hud.TokenHUD>;
 
     controlToken: (token: Token, controlled: boolean) => void;
     hoverToken: (token: Token, hovered: boolean) => void;

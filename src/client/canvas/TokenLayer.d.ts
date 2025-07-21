@@ -1,7 +1,7 @@
 declare global {
   class TokenLayer extends PlaceablesLayer<Token> {
     get ownedTokens(): Token[];
-    get hud(): TokenHUD;
+    get hud(): foundry.applications.hud.TokenHUD;
   }
 }
 
